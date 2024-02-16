@@ -29,12 +29,11 @@ jobs:
           ruby-version: .ruby-version
           # bundler-cache: true # runs 'bundle install' and caches installed gems automaticall
 
-      - uses: rubygems/release-gem@v1
+      - name: prepare ruby-sdk
+        run: |
+          gem build openapi_client.gemspec
 
-      # - name: prepare ruby-sdk
-        # run: |
-          # git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          # gem build openapi_client.gemspec
+      - uses: rubygems/release-gem@v1
 
       # - uses: cycjimmy/semantic-release-action@v4.0.0
         # with:
