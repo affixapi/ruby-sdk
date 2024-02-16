@@ -12,11 +12,15 @@ defaults:
 permissions:
   contents: write
   issues: write
+  id-token: write
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     timeout-minutes: 2
+    environment:
+      name: rubygems
+
     steps:
       - uses: actions/checkout@v4
 
@@ -25,8 +29,11 @@ jobs:
           ruby-version: .ruby-version
           # bundler-cache: true # runs 'bundle install' and caches installed gems automaticall
 
+      - uses: rubygems/release-gem@v1
+
       # - name: prepare ruby-sdk
         # run: |
+          # git config --global --add safe.directory "$GITHUB_WORKSPACE"
           # gem build openapi_client.gemspec
 
       # - uses: cycjimmy/semantic-release-action@v4.0.0
@@ -42,9 +49,9 @@ jobs:
         # with:
           # token: ${{ secrets.RUBY_GEMS_API_KEY }}
 
-      - name: Release Gem
-        uses: cadwallion/publish-rubygems-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
-          RELEASE_COMMAND: rake release
+      # - name: Release Gem
+        # uses: cadwallion/publish-rubygems-action@master
+        # env:
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
+          # RELEASE_COMMAND: rake release
