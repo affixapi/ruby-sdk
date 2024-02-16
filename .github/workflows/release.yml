@@ -37,7 +37,14 @@ jobs:
         # env:
           # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish package to RubyGems
-        uses: actionshub/publish-gem-to-rubygems@main
-        with:
-          token: ${{ secrets.RUBY_GEMS_API_KEY }}
+      # - name: Publish package to RubyGems
+        # uses: actionshub/publish-gem-to-rubygems@main
+        # with:
+          # token: ${{ secrets.RUBY_GEMS_API_KEY }}
+
+      - name: Release Gem
+        uses: cadwallion/publish-rubygems-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
+          RELEASE_COMMAND: rake release
