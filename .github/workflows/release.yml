@@ -20,6 +20,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+          # bundler-cache: true # runs 'bundle install' and caches installed gems automaticall
+
+      # - name: prepare ruby-sdk
+        # run: |
+          # gem build openapi_client.gemspec
+
       - uses: cycjimmy/semantic-release-action@v4.0.0
         with:
           semantic_version: 18
@@ -27,3 +36,8 @@ jobs:
             @semantic-release/changelog@6.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish package to RubyGems
+        uses: actionshub/publish-gem-to-rubygems@main
+        with:
+          token: ${{ secrets.RUBY_GEMS_API_KEY }}
