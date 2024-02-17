@@ -29,6 +29,10 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
+      # - name: prepare ruby-sdk
+        # run: |
+          # bundle install
+
       - uses: rubygems/release-gem@v1
 
       # - uses: cycjimmy/semantic-release-action@v4.0.0
