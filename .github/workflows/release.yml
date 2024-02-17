@@ -31,9 +31,9 @@ jobs:
 
       - name: prepare ruby-sdk
         run: |
-          gem install bundler
+          # gem install bundler
           bundle install
-          gem build affixapi.gemspec
+          # gem build affixapi.gemspec
 
       - uses: rubygems/release-gem@v1
 
