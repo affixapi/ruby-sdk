@@ -27,13 +27,7 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version
-          # bundler-cache: true # runs 'bundle install' and caches installed gems automaticall
-
-      - name: prepare ruby-sdk
-        run: |
-          # gem install bundler
-          bundle install
-          # gem build affixapi.gemspec
+          bundler-cache: true
 
       - uses: rubygems/release-gem@v1
 
@@ -44,15 +38,3 @@ jobs:
             # @semantic-release/changelog@6.0.0
         # env:
           # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # - name: Publish package to RubyGems
-        # uses: actionshub/publish-gem-to-rubygems@main
-        # with:
-          # token: ${{ secrets.RUBY_GEMS_API_KEY }}
-
-      # - name: Release Gem
-        # uses: cadwallion/publish-rubygems-action@master
-        # env:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
-          # RELEASE_COMMAND: rake release
