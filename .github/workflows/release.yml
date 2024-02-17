@@ -29,16 +29,12 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
-      # - name: prepare ruby-sdk
-        # run: |
-          # bundle install
-
       - uses: rubygems/release-gem@v1
 
-      # - uses: cycjimmy/semantic-release-action@v4.0.0
-        # with:
-          # semantic_version: 18
-          # extra_plugins: |
-            # @semantic-release/changelog@6.0.0
-        # env:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: cycjimmy/semantic-release-action@v4.0.0
+        with:
+          semantic_version: 18
+          extra_plugins: |
+            @semantic-release/changelog@6.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
