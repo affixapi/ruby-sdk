@@ -42,13 +42,17 @@ module OpenapiClient
     EMPLOYMENT_HERO = "employment hero".freeze
     FACTORIALHR = "factorialhr".freeze
     FOURTHHR = "fourthhr".freeze
+    GUSTO = "gusto".freeze
     ITRENT = "itrent".freeze
+    JUSTWORKS = "justworks".freeze
     OYSTERHR = "oysterhr".freeze
     PAYCIRCLE = "paycircle".freeze
     PENTO_IO = "pento.io".freeze
     PEOPLEHR = "peoplehr".freeze
     REMOTE_COM = "remote.com".freeze
+    RIPPLING = "rippling".freeze
     SAGEONE = "sageone".freeze
+    SHAPE_PAYROLL = "shape payroll".freeze
     SIMPLEPAY_IE = "simplepay.ie".freeze
 
     # Builds the enum from string
