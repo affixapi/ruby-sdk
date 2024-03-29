@@ -1,25 +1,25 @@
-# OpenapiClient::DeveloperApi
+# OpenapiClient::XHRApi
 
 All URIs are relative to *https://api.affixapi.com*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**developer_companies20230301**](DeveloperApi.md#developer_companies20230301) | **GET** /2023-03-01/developer/company | Company |
-| [**developer_create_employee20230301**](DeveloperApi.md#developer_create_employee20230301) | **POST** /2023-03-01/developer/employee | Create employee |
-| [**developer_employees20230301**](DeveloperApi.md#developer_employees20230301) | **GET** /2023-03-01/developer/employees | Employees |
-| [**developer_groups20230301**](DeveloperApi.md#developer_groups20230301) | **GET** /2023-03-01/developer/groups | Groups |
-| [**developer_identity20230301**](DeveloperApi.md#developer_identity20230301) | **GET** /2023-03-01/developer/identity | Identity |
-| [**developer_payruns20230301**](DeveloperApi.md#developer_payruns20230301) | **GET** /2023-03-01/developer/payruns | Payruns |
-| [**developer_payslips20230301**](DeveloperApi.md#developer_payslips20230301) | **GET** /2023-03-01/developer/payruns/{payrun_id} | Payslips |
-| [**developer_time_off_balances20230301**](DeveloperApi.md#developer_time_off_balances20230301) | **GET** /2023-03-01/developer/time-off-balances | Time off balances |
-| [**developer_time_off_entries20230301**](DeveloperApi.md#developer_time_off_entries20230301) | **GET** /2023-03-01/developer/time-off-entries | Time off entries |
-| [**developer_timesheets20230301**](DeveloperApi.md#developer_timesheets20230301) | **GET** /2023-03-01/developer/timesheets | Timesheets |
-| [**developer_work_locations20230301**](DeveloperApi.md#developer_work_locations20230301) | **GET** /2023-03-01/developer/work-locations | Work locations |
+| [**xhr_companies20230301**](XHRApi.md#xhr_companies20230301) | **GET** /2023-03-01/xhr/company | Company |
+| [**xhr_create_employee20230301**](XHRApi.md#xhr_create_employee20230301) | **POST** /2023-03-01/xhr/employee | Create employee |
+| [**xhr_employees20230301**](XHRApi.md#xhr_employees20230301) | **GET** /2023-03-01/xhr/employees | Employees |
+| [**xhr_groups20230301**](XHRApi.md#xhr_groups20230301) | **GET** /2023-03-01/xhr/groups | Groups |
+| [**xhr_identity20230301**](XHRApi.md#xhr_identity20230301) | **GET** /2023-03-01/xhr/identity | Identity |
+| [**xhr_payruns20230301**](XHRApi.md#xhr_payruns20230301) | **GET** /2023-03-01/xhr/payruns | Payruns |
+| [**xhr_payslips20230301**](XHRApi.md#xhr_payslips20230301) | **GET** /2023-03-01/xhr/payruns/{payrun_id} | Payslips |
+| [**xhr_time_off_balances20230301**](XHRApi.md#xhr_time_off_balances20230301) | **GET** /2023-03-01/xhr/time-off-balances | Time off balances |
+| [**xhr_time_off_entries20230301**](XHRApi.md#xhr_time_off_entries20230301) | **GET** /2023-03-01/xhr/time-off-entries | Time off entries |
+| [**xhr_timesheets20230301**](XHRApi.md#xhr_timesheets20230301) | **GET** /2023-03-01/xhr/timesheets | Timesheets |
+| [**xhr_work_locations20230301**](XHRApi.md#xhr_work_locations20230301) | **GET** /2023-03-01/xhr/work-locations | Work locations |
 
 
-## developer_companies20230301
+## xhr_companies20230301
 
-> <Array<CompanyResponse>> developer_companies20230301
+> <Array<CompanyResponse>> xhr_companies20230301
 
 Company
 
@@ -38,32 +38,32 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::DeveloperApi.new
+api_instance = OpenapiClient::XHRApi.new
 
 begin
   # Company
-  result = api_instance.developer_companies20230301
+  result = api_instance.xhr_companies20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_companies20230301: #{e}"
+  puts "Error when calling XHRApi->xhr_companies20230301: #{e}"
 end
 ```
 
-#### Using the developer_companies20230301_with_http_info variant
+#### Using the xhr_companies20230301_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<CompanyResponse>>, Integer, Hash)> developer_companies20230301_with_http_info
+> <Array(<Array<CompanyResponse>>, Integer, Hash)> xhr_companies20230301_with_http_info
 
 ```ruby
 begin
   # Company
-  data, status_code, headers = api_instance.developer_companies20230301_with_http_info
+  data, status_code, headers = api_instance.xhr_companies20230301_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<CompanyResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_companies20230301_with_http_info: #{e}"
+  puts "Error when calling XHRApi->xhr_companies20230301_with_http_info: #{e}"
 end
 ```
 
@@ -85,9 +85,9 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## developer_create_employee20230301
+## xhr_create_employee20230301
 
-> <EmployeeResponse> developer_create_employee20230301(create_employee_request)
+> <EmployeeResponse> xhr_create_employee20230301(create_employee_request)
 
 Create employee
 
@@ -106,33 +106,33 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::DeveloperApi.new
+api_instance = OpenapiClient::XHRApi.new
 create_employee_request = OpenapiClient::CreateEmployeeRequest.new({first_name: 'Greg', last_name: 'Hirsch'}) # CreateEmployeeRequest | 
 
 begin
   # Create employee
-  result = api_instance.developer_create_employee20230301(create_employee_request)
+  result = api_instance.xhr_create_employee20230301(create_employee_request)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_create_employee20230301: #{e}"
+  puts "Error when calling XHRApi->xhr_create_employee20230301: #{e}"
 end
 ```
 
-#### Using the developer_create_employee20230301_with_http_info variant
+#### Using the xhr_create_employee20230301_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<EmployeeResponse>, Integer, Hash)> developer_create_employee20230301_with_http_info(create_employee_request)
+> <Array(<EmployeeResponse>, Integer, Hash)> xhr_create_employee20230301_with_http_info(create_employee_request)
 
 ```ruby
 begin
   # Create employee
-  data, status_code, headers = api_instance.developer_create_employee20230301_with_http_info(create_employee_request)
+  data, status_code, headers = api_instance.xhr_create_employee20230301_with_http_info(create_employee_request)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <EmployeeResponse>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_create_employee20230301_with_http_info: #{e}"
+  puts "Error when calling XHRApi->xhr_create_employee20230301_with_http_info: #{e}"
 end
 ```
 
@@ -156,9 +156,9 @@ end
 - **Accept**: application/json
 
 
-## developer_employees20230301
+## xhr_employees20230301
 
-> <Array<EmployeeResponse>> developer_employees20230301
+> <Array<EmployeeResponse>> xhr_employees20230301
 
 Employees
 
@@ -177,32 +177,32 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::DeveloperApi.new
+api_instance = OpenapiClient::XHRApi.new
 
 begin
   # Employees
-  result = api_instance.developer_employees20230301
+  result = api_instance.xhr_employees20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_employees20230301: #{e}"
+  puts "Error when calling XHRApi->xhr_employees20230301: #{e}"
 end
 ```
 
-#### Using the developer_employees20230301_with_http_info variant
+#### Using the xhr_employees20230301_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<EmployeeResponse>>, Integer, Hash)> developer_employees20230301_with_http_info
+> <Array(<Array<EmployeeResponse>>, Integer, Hash)> xhr_employees20230301_with_http_info
 
 ```ruby
 begin
   # Employees
-  data, status_code, headers = api_instance.developer_employees20230301_with_http_info
+  data, status_code, headers = api_instance.xhr_employees20230301_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<EmployeeResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_employees20230301_with_http_info: #{e}"
+  puts "Error when calling XHRApi->xhr_employees20230301_with_http_info: #{e}"
 end
 ```
 
@@ -224,9 +224,9 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## developer_groups20230301
+## xhr_groups20230301
 
-> <Array<GroupResponse>> developer_groups20230301
+> <Array<GroupResponse>> xhr_groups20230301
 
 Groups
 
@@ -245,32 +245,32 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::DeveloperApi.new
+api_instance = OpenapiClient::XHRApi.new
 
 begin
   # Groups
-  result = api_instance.developer_groups20230301
+  result = api_instance.xhr_groups20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_groups20230301: #{e}"
+  puts "Error when calling XHRApi->xhr_groups20230301: #{e}"
 end
 ```
 
-#### Using the developer_groups20230301_with_http_info variant
+#### Using the xhr_groups20230301_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<GroupResponse>>, Integer, Hash)> developer_groups20230301_with_http_info
+> <Array(<Array<GroupResponse>>, Integer, Hash)> xhr_groups20230301_with_http_info
 
 ```ruby
 begin
   # Groups
-  data, status_code, headers = api_instance.developer_groups20230301_with_http_info
+  data, status_code, headers = api_instance.xhr_groups20230301_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<GroupResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_groups20230301_with_http_info: #{e}"
+  puts "Error when calling XHRApi->xhr_groups20230301_with_http_info: #{e}"
 end
 ```
 
@@ -292,9 +292,9 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## developer_identity20230301
+## xhr_identity20230301
 
-> <IdentityResponse> developer_identity20230301
+> <IdentityResponse> xhr_identity20230301
 
 Identity
 
@@ -313,32 +313,32 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::DeveloperApi.new
+api_instance = OpenapiClient::XHRApi.new
 
 begin
   # Identity
-  result = api_instance.developer_identity20230301
+  result = api_instance.xhr_identity20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_identity20230301: #{e}"
+  puts "Error when calling XHRApi->xhr_identity20230301: #{e}"
 end
 ```
 
-#### Using the developer_identity20230301_with_http_info variant
+#### Using the xhr_identity20230301_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<IdentityResponse>, Integer, Hash)> developer_identity20230301_with_http_info
+> <Array(<IdentityResponse>, Integer, Hash)> xhr_identity20230301_with_http_info
 
 ```ruby
 begin
   # Identity
-  data, status_code, headers = api_instance.developer_identity20230301_with_http_info
+  data, status_code, headers = api_instance.xhr_identity20230301_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <IdentityResponse>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_identity20230301_with_http_info: #{e}"
+  puts "Error when calling XHRApi->xhr_identity20230301_with_http_info: #{e}"
 end
 ```
 
@@ -360,9 +360,9 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## developer_payruns20230301
+## xhr_payruns20230301
 
-> <Array<PayrunResponse>> developer_payruns20230301(start_date, end_date)
+> <Array<PayrunResponse>> xhr_payruns20230301(start_date, end_date)
 
 Payruns
 
@@ -381,34 +381,34 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::DeveloperApi.new
+api_instance = OpenapiClient::XHRApi.new
 start_date = Date.parse('2013-10-20') # Date | The start date of the search period
 end_date = Date.parse('2013-10-20') # Date | The end date of the search period
 
 begin
   # Payruns
-  result = api_instance.developer_payruns20230301(start_date, end_date)
+  result = api_instance.xhr_payruns20230301(start_date, end_date)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_payruns20230301: #{e}"
+  puts "Error when calling XHRApi->xhr_payruns20230301: #{e}"
 end
 ```
 
-#### Using the developer_payruns20230301_with_http_info variant
+#### Using the xhr_payruns20230301_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<PayrunResponse>>, Integer, Hash)> developer_payruns20230301_with_http_info(start_date, end_date)
+> <Array(<Array<PayrunResponse>>, Integer, Hash)> xhr_payruns20230301_with_http_info(start_date, end_date)
 
 ```ruby
 begin
   # Payruns
-  data, status_code, headers = api_instance.developer_payruns20230301_with_http_info(start_date, end_date)
+  data, status_code, headers = api_instance.xhr_payruns20230301_with_http_info(start_date, end_date)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<PayrunResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_payruns20230301_with_http_info: #{e}"
+  puts "Error when calling XHRApi->xhr_payruns20230301_with_http_info: #{e}"
 end
 ```
 
@@ -433,9 +433,9 @@ end
 - **Accept**: application/json
 
 
-## developer_payslips20230301
+## xhr_payslips20230301
 
-> <Array<PayslipResponse>> developer_payslips20230301(payrun_id)
+> <Array<PayslipResponse>> xhr_payslips20230301(payrun_id)
 
 Payslips
 
@@ -454,33 +454,33 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::DeveloperApi.new
+api_instance = OpenapiClient::XHRApi.new
 payrun_id = 'payrun_id_example' # String | The id of the payrun.
 
 begin
   # Payslips
-  result = api_instance.developer_payslips20230301(payrun_id)
+  result = api_instance.xhr_payslips20230301(payrun_id)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_payslips20230301: #{e}"
+  puts "Error when calling XHRApi->xhr_payslips20230301: #{e}"
 end
 ```
 
-#### Using the developer_payslips20230301_with_http_info variant
+#### Using the xhr_payslips20230301_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<PayslipResponse>>, Integer, Hash)> developer_payslips20230301_with_http_info(payrun_id)
+> <Array(<Array<PayslipResponse>>, Integer, Hash)> xhr_payslips20230301_with_http_info(payrun_id)
 
 ```ruby
 begin
   # Payslips
-  data, status_code, headers = api_instance.developer_payslips20230301_with_http_info(payrun_id)
+  data, status_code, headers = api_instance.xhr_payslips20230301_with_http_info(payrun_id)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<PayslipResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_payslips20230301_with_http_info: #{e}"
+  puts "Error when calling XHRApi->xhr_payslips20230301_with_http_info: #{e}"
 end
 ```
 
@@ -504,9 +504,9 @@ end
 - **Accept**: application/json
 
 
-## developer_time_off_balances20230301
+## xhr_time_off_balances20230301
 
-> <Array<TimeOffBalanceResponse>> developer_time_off_balances20230301
+> <Array<TimeOffBalanceResponse>> xhr_time_off_balances20230301
 
 Time off balances
 
@@ -525,32 +525,32 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::DeveloperApi.new
+api_instance = OpenapiClient::XHRApi.new
 
 begin
   # Time off balances
-  result = api_instance.developer_time_off_balances20230301
+  result = api_instance.xhr_time_off_balances20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_time_off_balances20230301: #{e}"
+  puts "Error when calling XHRApi->xhr_time_off_balances20230301: #{e}"
 end
 ```
 
-#### Using the developer_time_off_balances20230301_with_http_info variant
+#### Using the xhr_time_off_balances20230301_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<TimeOffBalanceResponse>>, Integer, Hash)> developer_time_off_balances20230301_with_http_info
+> <Array(<Array<TimeOffBalanceResponse>>, Integer, Hash)> xhr_time_off_balances20230301_with_http_info
 
 ```ruby
 begin
   # Time off balances
-  data, status_code, headers = api_instance.developer_time_off_balances20230301_with_http_info
+  data, status_code, headers = api_instance.xhr_time_off_balances20230301_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<TimeOffBalanceResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_time_off_balances20230301_with_http_info: #{e}"
+  puts "Error when calling XHRApi->xhr_time_off_balances20230301_with_http_info: #{e}"
 end
 ```
 
@@ -572,9 +572,9 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## developer_time_off_entries20230301
+## xhr_time_off_entries20230301
 
-> <Array<TimeOffEntryResponse>> developer_time_off_entries20230301
+> <Array<TimeOffEntryResponse>> xhr_time_off_entries20230301
 
 Time off entries
 
@@ -593,32 +593,32 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::DeveloperApi.new
+api_instance = OpenapiClient::XHRApi.new
 
 begin
   # Time off entries
-  result = api_instance.developer_time_off_entries20230301
+  result = api_instance.xhr_time_off_entries20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_time_off_entries20230301: #{e}"
+  puts "Error when calling XHRApi->xhr_time_off_entries20230301: #{e}"
 end
 ```
 
-#### Using the developer_time_off_entries20230301_with_http_info variant
+#### Using the xhr_time_off_entries20230301_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<TimeOffEntryResponse>>, Integer, Hash)> developer_time_off_entries20230301_with_http_info
+> <Array(<Array<TimeOffEntryResponse>>, Integer, Hash)> xhr_time_off_entries20230301_with_http_info
 
 ```ruby
 begin
   # Time off entries
-  data, status_code, headers = api_instance.developer_time_off_entries20230301_with_http_info
+  data, status_code, headers = api_instance.xhr_time_off_entries20230301_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<TimeOffEntryResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_time_off_entries20230301_with_http_info: #{e}"
+  puts "Error when calling XHRApi->xhr_time_off_entries20230301_with_http_info: #{e}"
 end
 ```
 
@@ -640,9 +640,9 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## developer_timesheets20230301
+## xhr_timesheets20230301
 
-> <Array<TimesheetResponse>> developer_timesheets20230301
+> <Array<TimesheetResponse>> xhr_timesheets20230301
 
 Timesheets
 
@@ -661,32 +661,32 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::DeveloperApi.new
+api_instance = OpenapiClient::XHRApi.new
 
 begin
   # Timesheets
-  result = api_instance.developer_timesheets20230301
+  result = api_instance.xhr_timesheets20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_timesheets20230301: #{e}"
+  puts "Error when calling XHRApi->xhr_timesheets20230301: #{e}"
 end
 ```
 
-#### Using the developer_timesheets20230301_with_http_info variant
+#### Using the xhr_timesheets20230301_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<TimesheetResponse>>, Integer, Hash)> developer_timesheets20230301_with_http_info
+> <Array(<Array<TimesheetResponse>>, Integer, Hash)> xhr_timesheets20230301_with_http_info
 
 ```ruby
 begin
   # Timesheets
-  data, status_code, headers = api_instance.developer_timesheets20230301_with_http_info
+  data, status_code, headers = api_instance.xhr_timesheets20230301_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<TimesheetResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_timesheets20230301_with_http_info: #{e}"
+  puts "Error when calling XHRApi->xhr_timesheets20230301_with_http_info: #{e}"
 end
 ```
 
@@ -708,9 +708,9 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## developer_work_locations20230301
+## xhr_work_locations20230301
 
-> <Array<LocationResponse>> developer_work_locations20230301
+> <Array<LocationResponse>> xhr_work_locations20230301
 
 Work locations
 
@@ -729,32 +729,32 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::DeveloperApi.new
+api_instance = OpenapiClient::XHRApi.new
 
 begin
   # Work locations
-  result = api_instance.developer_work_locations20230301
+  result = api_instance.xhr_work_locations20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_work_locations20230301: #{e}"
+  puts "Error when calling XHRApi->xhr_work_locations20230301: #{e}"
 end
 ```
 
-#### Using the developer_work_locations20230301_with_http_info variant
+#### Using the xhr_work_locations20230301_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<LocationResponse>>, Integer, Hash)> developer_work_locations20230301_with_http_info
+> <Array(<Array<LocationResponse>>, Integer, Hash)> xhr_work_locations20230301_with_http_info
 
 ```ruby
 begin
   # Work locations
-  data, status_code, headers = api_instance.developer_work_locations20230301_with_http_info
+  data, status_code, headers = api_instance.xhr_work_locations20230301_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<LocationResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DeveloperApi->developer_work_locations20230301_with_http_info: #{e}"
+  puts "Error when calling XHRApi->xhr_work_locations20230301_with_http_info: #{e}"
 end
 ```
 

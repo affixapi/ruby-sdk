@@ -27,7 +27,7 @@ in order to get started, you must:
     the sign in flow is complete and exchange that `authorization_code` for
     a Bearer token
 
-# Sandbox keys (developer mode)
+# Sandbox keys (xhr mode)
 ### dev
 ```
 eyJhbGciOiJFUzI1NiIsImtpZCI6Ims5RmxwSFR1YklmZWNsUU5QRVZzeFcxazFZZ0Zfbk1BWllOSGVuOFQxdGciLCJ0eXAiOiJKV1MifQ.eyJwcm92aWRlciI6InNhbmRib3giLCJzY29wZXMiOlsiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2NvbXBhbnkiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWUiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWVzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2lkZW50aXR5IiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3BheXJ1bnMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvcGF5cnVucy86cGF5cnVuX2lkIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWJhbGFuY2VzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWVudHJpZXMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvdGltZXNoZWV0cyJdLCJ0b2tlbiI6ImQ1OTZhMmYzLWYzNzktNGE1ZC1hMmRhLTk4OWJmYWViYTg1ZCIsImlhdCI6MTcwMjkyMDkwMywiaXNzIjoicHVibGljYXBpLWludGVybWVkaWF0ZS5kZXYuZW5naW5lZXJpbmcuYWZmaXhhcGkuY29tIiwic3ViIjoiZGV2ZWxvcGVyIiwiYXVkIjoiM0ZEQUVERjktMURDQTRGNTQtODc5NDlGNkEtNDEwMjc2NDMifQ.VLWYjCQvBS0C3ZA6_J3-U-idZj5EYI2IlDdTjAWBxSIHGufp6cqaVodKsF2BeIqcIeB3P0lW-KL9mY3xGd7ckQ
@@ -38,7 +38,7 @@ eyJhbGciOiJFUzI1NiIsImtpZCI6Ims5RmxwSFR1YklmZWNsUU5QRVZzeFcxazFZZ0Zfbk1BWllOSGVu
 curl --fail \\
   -X GET \\
   -H 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6Ims5RmxwSFR1YklmZWNsUU5QRVZzeFcxazFZZ0Zfbk1BWllOSGVuOFQxdGciLCJ0eXAiOiJKV1MifQ.eyJwcm92aWRlciI6InNhbmRib3giLCJzY29wZXMiOlsiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2NvbXBhbnkiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWUiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWVzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2lkZW50aXR5IiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3BheXJ1bnMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvcGF5cnVucy86cGF5cnVuX2lkIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWJhbGFuY2VzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWVudHJpZXMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvdGltZXNoZWV0cyJdLCJ0b2tlbiI6ImQ1OTZhMmYzLWYzNzktNGE1ZC1hMmRhLTk4OWJmYWViYTg1ZCIsImlhdCI6MTcwMjkyMDkwMywiaXNzIjoicHVibGljYXBpLWludGVybWVkaWF0ZS5kZXYuZW5naW5lZXJpbmcuYWZmaXhhcGkuY29tIiwic3ViIjoiZGV2ZWxvcGVyIiwiYXVkIjoiM0ZEQUVERjktMURDQTRGNTQtODc5NDlGNkEtNDEwMjc2NDMifQ.VLWYjCQvBS0C3ZA6_J3-U-idZj5EYI2IlDdTjAWBxSIHGufp6cqaVodKsF2BeIqcIeB3P0lW-KL9mY3xGd7ckQ' \\
-  'https://dev.api.affixapi.com/2023-03-01/developer/employees'
+  'https://dev.api.affixapi.com/2023-03-01/xhr/employees'
 ```
 
 ### prod
@@ -51,7 +51,7 @@ eyJhbGciOiJFUzI1NiIsImtpZCI6Ims5RmxwSFR1YklmZWNsUU5QRVZzeFcxazFZZ0Zfbk1BWllOSGVu
 curl --fail \\
   -X GET \\
   -H 'Authorization: Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6Ims5RmxwSFR1YklmZWNsUU5QRVZzeFcxazFZZ0Zfbk1BWllOSGVuOFQxdGciLCJ0eXAiOiJKV1MifQ.eyJwcm92aWRlciI6InNhbmRib3giLCJzY29wZXMiOlsiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2NvbXBhbnkiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWUiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvZW1wbG95ZWVzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL2lkZW50aXR5IiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3BheXJ1bnMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvcGF5cnVucy86cGF5cnVuX2lkIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWJhbGFuY2VzIiwiLzIwMjMtMDMtMDEvZGV2ZWxvcGVyL3RpbWUtb2ZmLWVudHJpZXMiLCIvMjAyMy0wMy0wMS9kZXZlbG9wZXIvdGltZXNoZWV0cyJdLCJ0b2tlbiI6IjI5YjFjYTg4LWNlNjktNDgyZC1iNGZjLTkzMWMzZmJkYWM4ZSIsImlhdCI6MTcwMjkyMTA4MywiaXNzIjoicHVibGljYXBpLWludGVybWVkaWF0ZS5wcm9kLmVuZ2luZWVyaW5nLmFmZml4YXBpLmNvbSIsInN1YiI6ImRldmVsb3BlciIsImF1ZCI6IjA4QkIwODFFLUQ5QUI0RDE0LThERjk5MjMzLTY2NjE1Q0U5In0.2zdpFAmiyYiYk6MOcbXNUwwR4M1Fextnaac340x54AidiWXCyw-u9KeavbqfYF6q8a9kcDLrxhJ8Wc_3tIzuVw' \\
-  'https://api.affixapi.com/2023-03-01/developer/employees'
+  'https://api.affixapi.com/2023-03-01/xhr/employees'
 ```
 
 # Compression
@@ -274,10 +274,10 @@ api_instance = OpenapiClient::Class20230301Api.new
 
 begin
   #Company
-  result = api_instance.developer_companies20230301
+  result = api_instance.official_companies20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Exception when calling Class20230301Api->developer_companies20230301: #{e}"
+  puts "Exception when calling Class20230301Api->official_companies20230301: #{e}"
 end
 
 ```
@@ -288,17 +288,6 @@ All URIs are relative to *https://api.affixapi.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*OpenapiClient::Class20230301Api* | [**developer_companies20230301**](docs/Class20230301Api.md#developer_companies20230301) | **GET** /2023-03-01/developer/company | Company
-*OpenapiClient::Class20230301Api* | [**developer_create_employee20230301**](docs/Class20230301Api.md#developer_create_employee20230301) | **POST** /2023-03-01/developer/employee | Create employee
-*OpenapiClient::Class20230301Api* | [**developer_employees20230301**](docs/Class20230301Api.md#developer_employees20230301) | **GET** /2023-03-01/developer/employees | Employees
-*OpenapiClient::Class20230301Api* | [**developer_groups20230301**](docs/Class20230301Api.md#developer_groups20230301) | **GET** /2023-03-01/developer/groups | Groups
-*OpenapiClient::Class20230301Api* | [**developer_identity20230301**](docs/Class20230301Api.md#developer_identity20230301) | **GET** /2023-03-01/developer/identity | Identity
-*OpenapiClient::Class20230301Api* | [**developer_payruns20230301**](docs/Class20230301Api.md#developer_payruns20230301) | **GET** /2023-03-01/developer/payruns | Payruns
-*OpenapiClient::Class20230301Api* | [**developer_payslips20230301**](docs/Class20230301Api.md#developer_payslips20230301) | **GET** /2023-03-01/developer/payruns/{payrun_id} | Payslips
-*OpenapiClient::Class20230301Api* | [**developer_time_off_balances20230301**](docs/Class20230301Api.md#developer_time_off_balances20230301) | **GET** /2023-03-01/developer/time-off-balances | Time off balances
-*OpenapiClient::Class20230301Api* | [**developer_time_off_entries20230301**](docs/Class20230301Api.md#developer_time_off_entries20230301) | **GET** /2023-03-01/developer/time-off-entries | Time off entries
-*OpenapiClient::Class20230301Api* | [**developer_timesheets20230301**](docs/Class20230301Api.md#developer_timesheets20230301) | **GET** /2023-03-01/developer/timesheets | Timesheets
-*OpenapiClient::Class20230301Api* | [**developer_work_locations20230301**](docs/Class20230301Api.md#developer_work_locations20230301) | **GET** /2023-03-01/developer/work-locations | Work locations
 *OpenapiClient::Class20230301Api* | [**official_companies20230301**](docs/Class20230301Api.md#official_companies20230301) | **GET** /2023-03-01/official/company | Company
 *OpenapiClient::Class20230301Api* | [**official_create_employee20230301**](docs/Class20230301Api.md#official_create_employee20230301) | **POST** /2023-03-01/official/employee | Create Employee
 *OpenapiClient::Class20230301Api* | [**official_employees20230301**](docs/Class20230301Api.md#official_employees20230301) | **GET** /2023-03-01/official/employees | Employees
@@ -308,18 +297,18 @@ Class | Method | HTTP request | Description
 *OpenapiClient::Class20230301Api* | [**official_timesheets20230301**](docs/Class20230301Api.md#official_timesheets20230301) | **GET** /2023-03-01/official/timesheets | Timesheets
 *OpenapiClient::Class20230301Api* | [**official_work_locations20230301**](docs/Class20230301Api.md#official_work_locations20230301) | **GET** /2023-03-01/official/work-locations | Work locations
 *OpenapiClient::Class20230301Api* | [**officialdentity20230301**](docs/Class20230301Api.md#officialdentity20230301) | **GET** /2023-03-01/official/identity | Identity
+*OpenapiClient::Class20230301Api* | [**xhr_companies20230301**](docs/Class20230301Api.md#xhr_companies20230301) | **GET** /2023-03-01/xhr/company | Company
+*OpenapiClient::Class20230301Api* | [**xhr_create_employee20230301**](docs/Class20230301Api.md#xhr_create_employee20230301) | **POST** /2023-03-01/xhr/employee | Create employee
+*OpenapiClient::Class20230301Api* | [**xhr_employees20230301**](docs/Class20230301Api.md#xhr_employees20230301) | **GET** /2023-03-01/xhr/employees | Employees
+*OpenapiClient::Class20230301Api* | [**xhr_groups20230301**](docs/Class20230301Api.md#xhr_groups20230301) | **GET** /2023-03-01/xhr/groups | Groups
+*OpenapiClient::Class20230301Api* | [**xhr_identity20230301**](docs/Class20230301Api.md#xhr_identity20230301) | **GET** /2023-03-01/xhr/identity | Identity
+*OpenapiClient::Class20230301Api* | [**xhr_payruns20230301**](docs/Class20230301Api.md#xhr_payruns20230301) | **GET** /2023-03-01/xhr/payruns | Payruns
+*OpenapiClient::Class20230301Api* | [**xhr_payslips20230301**](docs/Class20230301Api.md#xhr_payslips20230301) | **GET** /2023-03-01/xhr/payruns/{payrun_id} | Payslips
+*OpenapiClient::Class20230301Api* | [**xhr_time_off_balances20230301**](docs/Class20230301Api.md#xhr_time_off_balances20230301) | **GET** /2023-03-01/xhr/time-off-balances | Time off balances
+*OpenapiClient::Class20230301Api* | [**xhr_time_off_entries20230301**](docs/Class20230301Api.md#xhr_time_off_entries20230301) | **GET** /2023-03-01/xhr/time-off-entries | Time off entries
+*OpenapiClient::Class20230301Api* | [**xhr_timesheets20230301**](docs/Class20230301Api.md#xhr_timesheets20230301) | **GET** /2023-03-01/xhr/timesheets | Timesheets
+*OpenapiClient::Class20230301Api* | [**xhr_work_locations20230301**](docs/Class20230301Api.md#xhr_work_locations20230301) | **GET** /2023-03-01/xhr/work-locations | Work locations
 *OpenapiClient::CoreApi* | [**providers**](docs/CoreApi.md#providers) | **GET** /providers | Providers
-*OpenapiClient::DeveloperApi* | [**developer_companies20230301**](docs/DeveloperApi.md#developer_companies20230301) | **GET** /2023-03-01/developer/company | Company
-*OpenapiClient::DeveloperApi* | [**developer_create_employee20230301**](docs/DeveloperApi.md#developer_create_employee20230301) | **POST** /2023-03-01/developer/employee | Create employee
-*OpenapiClient::DeveloperApi* | [**developer_employees20230301**](docs/DeveloperApi.md#developer_employees20230301) | **GET** /2023-03-01/developer/employees | Employees
-*OpenapiClient::DeveloperApi* | [**developer_groups20230301**](docs/DeveloperApi.md#developer_groups20230301) | **GET** /2023-03-01/developer/groups | Groups
-*OpenapiClient::DeveloperApi* | [**developer_identity20230301**](docs/DeveloperApi.md#developer_identity20230301) | **GET** /2023-03-01/developer/identity | Identity
-*OpenapiClient::DeveloperApi* | [**developer_payruns20230301**](docs/DeveloperApi.md#developer_payruns20230301) | **GET** /2023-03-01/developer/payruns | Payruns
-*OpenapiClient::DeveloperApi* | [**developer_payslips20230301**](docs/DeveloperApi.md#developer_payslips20230301) | **GET** /2023-03-01/developer/payruns/{payrun_id} | Payslips
-*OpenapiClient::DeveloperApi* | [**developer_time_off_balances20230301**](docs/DeveloperApi.md#developer_time_off_balances20230301) | **GET** /2023-03-01/developer/time-off-balances | Time off balances
-*OpenapiClient::DeveloperApi* | [**developer_time_off_entries20230301**](docs/DeveloperApi.md#developer_time_off_entries20230301) | **GET** /2023-03-01/developer/time-off-entries | Time off entries
-*OpenapiClient::DeveloperApi* | [**developer_timesheets20230301**](docs/DeveloperApi.md#developer_timesheets20230301) | **GET** /2023-03-01/developer/timesheets | Timesheets
-*OpenapiClient::DeveloperApi* | [**developer_work_locations20230301**](docs/DeveloperApi.md#developer_work_locations20230301) | **GET** /2023-03-01/developer/work-locations | Work locations
 *OpenapiClient::ManagementApi* | [**client**](docs/ManagementApi.md#client) | **GET** /2023-03-01/management/client | Client
 *OpenapiClient::ManagementApi* | [**disconnect**](docs/ManagementApi.md#disconnect) | **POST** /2023-03-01/management/disconnect | Disconnect token
 *OpenapiClient::ManagementApi* | [**introspect**](docs/ManagementApi.md#introspect) | **GET** /2023-03-01/management/introspect | Inspect token
@@ -335,6 +324,17 @@ Class | Method | HTTP request | Description
 *OpenapiClient::OfficialApi* | [**official_timesheets20230301**](docs/OfficialApi.md#official_timesheets20230301) | **GET** /2023-03-01/official/timesheets | Timesheets
 *OpenapiClient::OfficialApi* | [**official_work_locations20230301**](docs/OfficialApi.md#official_work_locations20230301) | **GET** /2023-03-01/official/work-locations | Work locations
 *OpenapiClient::OfficialApi* | [**officialdentity20230301**](docs/OfficialApi.md#officialdentity20230301) | **GET** /2023-03-01/official/identity | Identity
+*OpenapiClient::XHRApi* | [**xhr_companies20230301**](docs/XHRApi.md#xhr_companies20230301) | **GET** /2023-03-01/xhr/company | Company
+*OpenapiClient::XHRApi* | [**xhr_create_employee20230301**](docs/XHRApi.md#xhr_create_employee20230301) | **POST** /2023-03-01/xhr/employee | Create employee
+*OpenapiClient::XHRApi* | [**xhr_employees20230301**](docs/XHRApi.md#xhr_employees20230301) | **GET** /2023-03-01/xhr/employees | Employees
+*OpenapiClient::XHRApi* | [**xhr_groups20230301**](docs/XHRApi.md#xhr_groups20230301) | **GET** /2023-03-01/xhr/groups | Groups
+*OpenapiClient::XHRApi* | [**xhr_identity20230301**](docs/XHRApi.md#xhr_identity20230301) | **GET** /2023-03-01/xhr/identity | Identity
+*OpenapiClient::XHRApi* | [**xhr_payruns20230301**](docs/XHRApi.md#xhr_payruns20230301) | **GET** /2023-03-01/xhr/payruns | Payruns
+*OpenapiClient::XHRApi* | [**xhr_payslips20230301**](docs/XHRApi.md#xhr_payslips20230301) | **GET** /2023-03-01/xhr/payruns/{payrun_id} | Payslips
+*OpenapiClient::XHRApi* | [**xhr_time_off_balances20230301**](docs/XHRApi.md#xhr_time_off_balances20230301) | **GET** /2023-03-01/xhr/time-off-balances | Time off balances
+*OpenapiClient::XHRApi* | [**xhr_time_off_entries20230301**](docs/XHRApi.md#xhr_time_off_entries20230301) | **GET** /2023-03-01/xhr/time-off-entries | Time off entries
+*OpenapiClient::XHRApi* | [**xhr_timesheets20230301**](docs/XHRApi.md#xhr_timesheets20230301) | **GET** /2023-03-01/xhr/timesheets | Timesheets
+*OpenapiClient::XHRApi* | [**xhr_work_locations20230301**](docs/XHRApi.md#xhr_work_locations20230301) | **GET** /2023-03-01/xhr/work-locations | Work locations
 
 
 ## Documentation for Models
