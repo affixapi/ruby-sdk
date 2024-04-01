@@ -1,20 +1,20 @@
-# OpenapiClient::XHRApi
+# OpenapiClient::XHRVerticallyIntegratedApi
 
 All URIs are relative to *https://api.affixapi.com*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**xhr_companies20230301**](XHRApi.md#xhr_companies20230301) | **GET** /2023-03-01/xhr/company | Company |
-| [**xhr_create_employee20230301**](XHRApi.md#xhr_create_employee20230301) | **POST** /2023-03-01/xhr/employee | Create employee |
-| [**xhr_employees20230301**](XHRApi.md#xhr_employees20230301) | **GET** /2023-03-01/xhr/employees | Employees |
-| [**xhr_groups20230301**](XHRApi.md#xhr_groups20230301) | **GET** /2023-03-01/xhr/groups | Groups |
-| [**xhr_identity20230301**](XHRApi.md#xhr_identity20230301) | **GET** /2023-03-01/xhr/identity | Identity |
-| [**xhr_payruns20230301**](XHRApi.md#xhr_payruns20230301) | **GET** /2023-03-01/xhr/payruns | Payruns |
-| [**xhr_payslips20230301**](XHRApi.md#xhr_payslips20230301) | **GET** /2023-03-01/xhr/payruns/{payrun_id} | Payslips |
-| [**xhr_time_off_balances20230301**](XHRApi.md#xhr_time_off_balances20230301) | **GET** /2023-03-01/xhr/time-off-balances | Time off balances |
-| [**xhr_time_off_entries20230301**](XHRApi.md#xhr_time_off_entries20230301) | **GET** /2023-03-01/xhr/time-off-entries | Time off entries |
-| [**xhr_timesheets20230301**](XHRApi.md#xhr_timesheets20230301) | **GET** /2023-03-01/xhr/timesheets | Timesheets |
-| [**xhr_work_locations20230301**](XHRApi.md#xhr_work_locations20230301) | **GET** /2023-03-01/xhr/work-locations | Work locations |
+| [**xhr_companies20230301**](XHRVerticallyIntegratedApi.md#xhr_companies20230301) | **GET** /2023-03-01/xhr/company | Company |
+| [**xhr_create_employee20230301**](XHRVerticallyIntegratedApi.md#xhr_create_employee20230301) | **POST** /2023-03-01/xhr/employee | Create employee |
+| [**xhr_employees20230301**](XHRVerticallyIntegratedApi.md#xhr_employees20230301) | **GET** /2023-03-01/xhr/employees | Employees |
+| [**xhr_groups20230301**](XHRVerticallyIntegratedApi.md#xhr_groups20230301) | **GET** /2023-03-01/xhr/groups | Groups |
+| [**xhr_identity20230301**](XHRVerticallyIntegratedApi.md#xhr_identity20230301) | **GET** /2023-03-01/xhr/identity | Identity |
+| [**xhr_payruns20230301**](XHRVerticallyIntegratedApi.md#xhr_payruns20230301) | **GET** /2023-03-01/xhr/payruns | Payruns |
+| [**xhr_payslips20230301**](XHRVerticallyIntegratedApi.md#xhr_payslips20230301) | **GET** /2023-03-01/xhr/payruns/{payrun_id} | Payslips |
+| [**xhr_time_off_balances20230301**](XHRVerticallyIntegratedApi.md#xhr_time_off_balances20230301) | **GET** /2023-03-01/xhr/time-off-balances | Time off balances |
+| [**xhr_time_off_entries20230301**](XHRVerticallyIntegratedApi.md#xhr_time_off_entries20230301) | **GET** /2023-03-01/xhr/time-off-entries | Time off entries |
+| [**xhr_timesheets20230301**](XHRVerticallyIntegratedApi.md#xhr_timesheets20230301) | **GET** /2023-03-01/xhr/timesheets | Timesheets |
+| [**xhr_work_locations20230301**](XHRVerticallyIntegratedApi.md#xhr_work_locations20230301) | **GET** /2023-03-01/xhr/work-locations | Work locations |
 
 
 ## xhr_companies20230301
@@ -38,14 +38,14 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XHRApi.new
+api_instance = OpenapiClient::XHRVerticallyIntegratedApi.new
 
 begin
   # Company
   result = api_instance.xhr_companies20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_companies20230301: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_companies20230301: #{e}"
 end
 ```
 
@@ -63,7 +63,7 @@ begin
   p headers # => { ... }
   p data # => <Array<CompanyResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_companies20230301_with_http_info: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_companies20230301_with_http_info: #{e}"
 end
 ```
 
@@ -106,7 +106,7 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XHRApi.new
+api_instance = OpenapiClient::XHRVerticallyIntegratedApi.new
 create_employee_request = OpenapiClient::CreateEmployeeRequest.new({first_name: 'Greg', last_name: 'Hirsch'}) # CreateEmployeeRequest | 
 
 begin
@@ -114,7 +114,7 @@ begin
   result = api_instance.xhr_create_employee20230301(create_employee_request)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_create_employee20230301: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_create_employee20230301: #{e}"
 end
 ```
 
@@ -132,7 +132,7 @@ begin
   p headers # => { ... }
   p data # => <EmployeeResponse>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_create_employee20230301_with_http_info: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_create_employee20230301_with_http_info: #{e}"
 end
 ```
 
@@ -177,14 +177,14 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XHRApi.new
+api_instance = OpenapiClient::XHRVerticallyIntegratedApi.new
 
 begin
   # Employees
   result = api_instance.xhr_employees20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_employees20230301: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_employees20230301: #{e}"
 end
 ```
 
@@ -202,7 +202,7 @@ begin
   p headers # => { ... }
   p data # => <Array<EmployeeResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_employees20230301_with_http_info: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_employees20230301_with_http_info: #{e}"
 end
 ```
 
@@ -245,14 +245,14 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XHRApi.new
+api_instance = OpenapiClient::XHRVerticallyIntegratedApi.new
 
 begin
   # Groups
   result = api_instance.xhr_groups20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_groups20230301: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_groups20230301: #{e}"
 end
 ```
 
@@ -270,7 +270,7 @@ begin
   p headers # => { ... }
   p data # => <Array<GroupResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_groups20230301_with_http_info: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_groups20230301_with_http_info: #{e}"
 end
 ```
 
@@ -313,14 +313,14 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XHRApi.new
+api_instance = OpenapiClient::XHRVerticallyIntegratedApi.new
 
 begin
   # Identity
   result = api_instance.xhr_identity20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_identity20230301: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_identity20230301: #{e}"
 end
 ```
 
@@ -338,7 +338,7 @@ begin
   p headers # => { ... }
   p data # => <IdentityResponse>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_identity20230301_with_http_info: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_identity20230301_with_http_info: #{e}"
 end
 ```
 
@@ -381,7 +381,7 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XHRApi.new
+api_instance = OpenapiClient::XHRVerticallyIntegratedApi.new
 start_date = Date.parse('2013-10-20') # Date | The start date of the search period
 end_date = Date.parse('2013-10-20') # Date | The end date of the search period
 
@@ -390,7 +390,7 @@ begin
   result = api_instance.xhr_payruns20230301(start_date, end_date)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_payruns20230301: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_payruns20230301: #{e}"
 end
 ```
 
@@ -408,7 +408,7 @@ begin
   p headers # => { ... }
   p data # => <Array<PayrunResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_payruns20230301_with_http_info: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_payruns20230301_with_http_info: #{e}"
 end
 ```
 
@@ -454,7 +454,7 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XHRApi.new
+api_instance = OpenapiClient::XHRVerticallyIntegratedApi.new
 payrun_id = 'payrun_id_example' # String | The id of the payrun.
 
 begin
@@ -462,7 +462,7 @@ begin
   result = api_instance.xhr_payslips20230301(payrun_id)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_payslips20230301: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_payslips20230301: #{e}"
 end
 ```
 
@@ -480,7 +480,7 @@ begin
   p headers # => { ... }
   p data # => <Array<PayslipResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_payslips20230301_with_http_info: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_payslips20230301_with_http_info: #{e}"
 end
 ```
 
@@ -525,14 +525,14 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XHRApi.new
+api_instance = OpenapiClient::XHRVerticallyIntegratedApi.new
 
 begin
   # Time off balances
   result = api_instance.xhr_time_off_balances20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_time_off_balances20230301: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_time_off_balances20230301: #{e}"
 end
 ```
 
@@ -550,7 +550,7 @@ begin
   p headers # => { ... }
   p data # => <Array<TimeOffBalanceResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_time_off_balances20230301_with_http_info: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_time_off_balances20230301_with_http_info: #{e}"
 end
 ```
 
@@ -593,14 +593,14 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XHRApi.new
+api_instance = OpenapiClient::XHRVerticallyIntegratedApi.new
 
 begin
   # Time off entries
   result = api_instance.xhr_time_off_entries20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_time_off_entries20230301: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_time_off_entries20230301: #{e}"
 end
 ```
 
@@ -618,7 +618,7 @@ begin
   p headers # => { ... }
   p data # => <Array<TimeOffEntryResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_time_off_entries20230301_with_http_info: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_time_off_entries20230301_with_http_info: #{e}"
 end
 ```
 
@@ -661,14 +661,14 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XHRApi.new
+api_instance = OpenapiClient::XHRVerticallyIntegratedApi.new
 
 begin
   # Timesheets
   result = api_instance.xhr_timesheets20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_timesheets20230301: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_timesheets20230301: #{e}"
 end
 ```
 
@@ -686,7 +686,7 @@ begin
   p headers # => { ... }
   p data # => <Array<TimesheetResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_timesheets20230301_with_http_info: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_timesheets20230301_with_http_info: #{e}"
 end
 ```
 
@@ -729,14 +729,14 @@ OpenapiClient.configure do |config|
   # config.api_key_prefix['access-token'] = 'Bearer'
 end
 
-api_instance = OpenapiClient::XHRApi.new
+api_instance = OpenapiClient::XHRVerticallyIntegratedApi.new
 
 begin
   # Work locations
   result = api_instance.xhr_work_locations20230301
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_work_locations20230301: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_work_locations20230301: #{e}"
 end
 ```
 
@@ -754,7 +754,7 @@ begin
   p headers # => { ... }
   p data # => <Array<LocationResponse>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling XHRApi->xhr_work_locations20230301_with_http_info: #{e}"
+  puts "Error when calling XHRVerticallyIntegratedApi->xhr_work_locations20230301_with_http_info: #{e}"
 end
 ```
 

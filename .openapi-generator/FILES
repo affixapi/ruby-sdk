@@ -36,7 +36,6 @@ docs/ManagementApi.md
 docs/MessageResponse.md
 docs/ModeRequest.md
 docs/ModeResponse.md
-docs/OfficialApi.md
 docs/PayrunResponse.md
 docs/PayslipResponse.md
 docs/PayslipResponseContributions.md
@@ -52,14 +51,13 @@ docs/TimeOffEntryResponse.md
 docs/TimesheetResponse.md
 docs/TokenRequest.md
 docs/TokenResponse.md
-docs/XHRApi.md
+docs/XHRVerticallyIntegratedApi.md
 git_push.sh
 lib/openapi_client.rb
 lib/openapi_client/api/class20230301_api.rb
 lib/openapi_client/api/core_api.rb
 lib/openapi_client/api/management_api.rb
-lib/openapi_client/api/official_api.rb
-lib/openapi_client/api/xhr_api.rb
+lib/openapi_client/api/xhr_vertically_integrated_api.rb
 lib/openapi_client/api_client.rb
 lib/openapi_client/api_error.rb
 lib/openapi_client/configuration.rb
@@ -110,8 +108,7 @@ openapi_client.gemspec
 spec/api/class20230301_api_spec.rb
 spec/api/core_api_spec.rb
 spec/api/management_api_spec.rb
-spec/api/official_api_spec.rb
-spec/api/xhr_api_spec.rb
+spec/api/xhr_vertically_integrated_api_spec.rb
 spec/api_client_spec.rb
 spec/configuration_spec.rb
 spec/models/address_no_non_null_request_spec.rb
