@@ -289,7 +289,6 @@ All URIs are relative to *https://api.affixapi.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *OpenapiClient::Class20230301Api* | [**xhr_companies20230301**](docs/Class20230301Api.md#xhr_companies20230301) | **GET** /2023-03-01/xhr/company | Company
-*OpenapiClient::Class20230301Api* | [**xhr_create_employee20230301**](docs/Class20230301Api.md#xhr_create_employee20230301) | **POST** /2023-03-01/xhr/employee | Create employee
 *OpenapiClient::Class20230301Api* | [**xhr_employees20230301**](docs/Class20230301Api.md#xhr_employees20230301) | **GET** /2023-03-01/xhr/employees | Employees
 *OpenapiClient::Class20230301Api* | [**xhr_groups20230301**](docs/Class20230301Api.md#xhr_groups20230301) | **GET** /2023-03-01/xhr/groups | Groups
 *OpenapiClient::Class20230301Api* | [**xhr_identity20230301**](docs/Class20230301Api.md#xhr_identity20230301) | **GET** /2023-03-01/xhr/identity | Identity
@@ -307,7 +306,6 @@ Class | Method | HTTP request | Description
 *OpenapiClient::ManagementApi* | [**tokens**](docs/ManagementApi.md#tokens) | **GET** /2023-03-01/management/tokens | Tokens
 *OpenapiClient::ManagementApi* | [**update_client**](docs/ManagementApi.md#update_client) | **POST** /2023-03-01/management/client | Update client
 *OpenapiClient::XHRVerticallyIntegratedApi* | [**xhr_companies20230301**](docs/XHRVerticallyIntegratedApi.md#xhr_companies20230301) | **GET** /2023-03-01/xhr/company | Company
-*OpenapiClient::XHRVerticallyIntegratedApi* | [**xhr_create_employee20230301**](docs/XHRVerticallyIntegratedApi.md#xhr_create_employee20230301) | **POST** /2023-03-01/xhr/employee | Create employee
 *OpenapiClient::XHRVerticallyIntegratedApi* | [**xhr_employees20230301**](docs/XHRVerticallyIntegratedApi.md#xhr_employees20230301) | **GET** /2023-03-01/xhr/employees | Employees
 *OpenapiClient::XHRVerticallyIntegratedApi* | [**xhr_groups20230301**](docs/XHRVerticallyIntegratedApi.md#xhr_groups20230301) | **GET** /2023-03-01/xhr/groups | Groups
 *OpenapiClient::XHRVerticallyIntegratedApi* | [**xhr_identity20230301**](docs/XHRVerticallyIntegratedApi.md#xhr_identity20230301) | **GET** /2023-03-01/xhr/identity | Identity

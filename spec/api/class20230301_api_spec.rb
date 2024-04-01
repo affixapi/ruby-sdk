@@ -43,18 +43,6 @@ describe 'Class20230301Api' do
     end
   end
 
-  # unit tests for xhr_create_employee20230301
-  # Create employee
-  # Creates a new Employee 
-  # @param create_employee_request 
-  # @param [Hash] opts the optional parameters
-  # @return [EmployeeResponse]
-  describe 'xhr_create_employee20230301 test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for xhr_employees20230301
   # Employees
   # List the individuals (employees, contractors, accountants, and others) listed in the HRIS/Payroll software 
