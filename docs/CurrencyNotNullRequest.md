@@ -1,4 +1,4 @@
-# OpenapiClient::CurrencyRequest
+# OpenapiClient::CurrencyNotNullRequest
 
 ## Properties
 
@@ -10,6 +10,6 @@
 ```ruby
 require 'openapi_client'
 
-instance = OpenapiClient::CurrencyRequest.new()
+instance = OpenapiClient::CurrencyNotNullRequest.new()
 ```
 

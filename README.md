@@ -327,7 +327,7 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::CreateEmployeeRequest](docs/CreateEmployeeRequest.md)
  - [OpenapiClient::CreateEmployeeRequestBankAccount](docs/CreateEmployeeRequestBankAccount.md)
  - [OpenapiClient::CreateEmployeeRequestManager](docs/CreateEmployeeRequestManager.md)
- - [OpenapiClient::CurrencyRequest](docs/CurrencyRequest.md)
+ - [OpenapiClient::CurrencyNotNullRequest](docs/CurrencyNotNullRequest.md)
  - [OpenapiClient::CurrencyResponse](docs/CurrencyResponse.md)
  - [OpenapiClient::DisconnectResponse](docs/DisconnectResponse.md)
  - [OpenapiClient::EmployeeResponse](docs/EmployeeResponse.md)

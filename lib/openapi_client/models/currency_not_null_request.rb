@@ -14,7 +14,7 @@ require 'date'
 require 'time'
 
 module OpenapiClient
-  class CurrencyRequest
+  class CurrencyNotNullRequest
     USD = "usd".freeze
     GBP = "gbp".freeze
     EUR = "eur".freeze
@@ -30,8 +30,8 @@ module OpenapiClient
     # @param [String] The enum value in the form of the string
     # @return [String] The enum value
     def build_from_hash(value)
-      constantValues = CurrencyRequest.constants.select { |c| CurrencyRequest::const_get(c) == value }
-      raise "Invalid ENUM value #{value} for class #CurrencyRequest" if constantValues.empty?
+      constantValues = CurrencyNotNullRequest.constants.select { |c| CurrencyNotNullRequest::const_get(c) == value }
+      raise "Invalid ENUM value #{value} for class #CurrencyNotNullRequest" if constantValues.empty?
       value
     end
   end

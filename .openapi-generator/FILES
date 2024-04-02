@@ -16,7 +16,7 @@ docs/CoreApi.md
 docs/CreateEmployeeRequest.md
 docs/CreateEmployeeRequestBankAccount.md
 docs/CreateEmployeeRequestManager.md
-docs/CurrencyRequest.md
+docs/CurrencyNotNullRequest.md
 docs/CurrencyResponse.md
 docs/DisconnectResponse.md
 docs/EmployeeResponse.md
@@ -69,7 +69,7 @@ lib/openapi_client/models/company_response.rb
 lib/openapi_client/models/create_employee_request.rb
 lib/openapi_client/models/create_employee_request_bank_account.rb
 lib/openapi_client/models/create_employee_request_manager.rb
-lib/openapi_client/models/currency_request.rb
+lib/openapi_client/models/currency_not_null_request.rb
 lib/openapi_client/models/currency_response.rb
 lib/openapi_client/models/disconnect_response.rb
 lib/openapi_client/models/employee_response.rb
@@ -119,7 +119,7 @@ spec/models/company_response_spec.rb
 spec/models/create_employee_request_bank_account_spec.rb
 spec/models/create_employee_request_manager_spec.rb
 spec/models/create_employee_request_spec.rb
-spec/models/currency_request_spec.rb
+spec/models/currency_not_null_request_spec.rb
 spec/models/currency_response_spec.rb
 spec/models/disconnect_response_spec.rb
 spec/models/employee_response_spec.rb

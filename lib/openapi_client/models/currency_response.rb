@@ -15,6 +15,7 @@ require 'time'
 
 module OpenapiClient
   class CurrencyResponse
+    NULL = "null".freeze
     USD = "usd".freeze
     GBP = "gbp".freeze
     EUR = "eur".freeze
