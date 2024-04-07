@@ -90,6 +90,7 @@ module OpenapiClient
         :'pay_period',
         :'pay_frequency',
         :'employment_type',
+        :'currency',
         :'effective_date'
       ])
     end
@@ -142,10 +143,6 @@ module OpenapiClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @currency.nil?
-        invalid_properties.push('invalid value for "currency", currency cannot be nil.')
-      end
-
       invalid_properties
     end
 
@@ -156,7 +153,6 @@ module OpenapiClient
       return false unless pay_frequency_validator.valid?(@pay_frequency)
       employment_type_validator = EnumAttributeValidator.new('String', ["full_time", "part_time", "contractor", "other"])
       return false unless employment_type_validator.valid?(@employment_type)
-      return false if @currency.nil?
       true
     end
 

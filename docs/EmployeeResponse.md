@@ -28,7 +28,7 @@
 | **avatar** | **String** |  |  |
 | **home_location** | [**AddressResponse**](AddressResponse.md) |  |  |
 | **work_location** | [**LocationResponse**](LocationResponse.md) |  |  |
-| **manager** | [**CreateEmployeeRequestManager**](CreateEmployeeRequestManager.md) |  |  |
+| **manager** | [**EmployeeResponseManager**](EmployeeResponseManager.md) |  |  |
 | **bank_account** | [**CreateEmployeeRequestBankAccount**](CreateEmployeeRequestBankAccount.md) |  |  |
 | **employments** | [**Array&lt;EmploymentResponse&gt;**](EmploymentResponse.md) |  |  |
 | **custom_fields** | **Object** |  |  |

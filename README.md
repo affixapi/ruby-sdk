@@ -331,6 +331,7 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::CurrencyResponse](docs/CurrencyResponse.md)
  - [OpenapiClient::DisconnectResponse](docs/DisconnectResponse.md)
  - [OpenapiClient::EmployeeResponse](docs/EmployeeResponse.md)
+ - [OpenapiClient::EmployeeResponseManager](docs/EmployeeResponseManager.md)
  - [OpenapiClient::EmploymentNoNullEnumRequest](docs/EmploymentNoNullEnumRequest.md)
  - [OpenapiClient::EmploymentResponse](docs/EmploymentResponse.md)
  - [OpenapiClient::GroupNoNullEnumRequest](docs/GroupNoNullEnumRequest.md)

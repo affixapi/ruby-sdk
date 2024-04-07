@@ -20,6 +20,7 @@ docs/CurrencyNotNullRequest.md
 docs/CurrencyResponse.md
 docs/DisconnectResponse.md
 docs/EmployeeResponse.md
+docs/EmployeeResponseManager.md
 docs/EmploymentNoNullEnumRequest.md
 docs/EmploymentResponse.md
 docs/GroupNoNullEnumRequest.md
@@ -73,6 +74,7 @@ lib/openapi_client/models/currency_not_null_request.rb
 lib/openapi_client/models/currency_response.rb
 lib/openapi_client/models/disconnect_response.rb
 lib/openapi_client/models/employee_response.rb
+lib/openapi_client/models/employee_response_manager.rb
 lib/openapi_client/models/employment_no_null_enum_request.rb
 lib/openapi_client/models/employment_response.rb
 lib/openapi_client/models/group_no_null_enum_request.rb
@@ -122,6 +124,7 @@ spec/models/create_employee_request_spec.rb
 spec/models/currency_not_null_request_spec.rb
 spec/models/currency_response_spec.rb
 spec/models/disconnect_response_spec.rb
+spec/models/employee_response_manager_spec.rb
 spec/models/employee_response_spec.rb
 spec/models/employment_no_null_enum_request_spec.rb
 spec/models/employment_response_spec.rb

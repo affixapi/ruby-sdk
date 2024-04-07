@@ -169,7 +169,7 @@ module OpenapiClient
         :'avatar' => :'String',
         :'home_location' => :'AddressResponse',
         :'work_location' => :'LocationResponse',
-        :'manager' => :'CreateEmployeeRequestManager',
+        :'manager' => :'EmployeeResponseManager',
         :'bank_account' => :'CreateEmployeeRequestBankAccount',
         :'employments' => :'Array<EmploymentResponse>',
         :'custom_fields' => :'Object',
