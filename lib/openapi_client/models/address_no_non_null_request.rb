@@ -133,7 +133,7 @@ module OpenapiClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      country_validator = EnumAttributeValidator.new('String', ["AT", "AU", "BE", "CA", "CH", "CN", "CZ", "DE", "DK", "EE", "ES", "FR", "GB", "HK", "IE", "IT", "JP", "LT", "LV", "NL", "NO", "PH", "PL", "RO", "SE", "SG", "SK", "TW", "US"])
+      country_validator = EnumAttributeValidator.new('String', ["AT", "AU", "BE", "CA", "CH", "CN", "CZ", "DE", "DK", "EE", "ES", "FR", "GB", "HK", "ID", "IE", "IN", "IT", "JP", "KR", "LT", "LV", "MO", "MY", "NL", "NO", "PH", "PL", "RO", "SE", "SG", "SK", "TW", "US"])
       return false unless country_validator.valid?(@country)
       true
     end
@@ -141,7 +141,7 @@ module OpenapiClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] country Object to be assigned
     def country=(country)
-      validator = EnumAttributeValidator.new('String', ["AT", "AU", "BE", "CA", "CH", "CN", "CZ", "DE", "DK", "EE", "ES", "FR", "GB", "HK", "IE", "IT", "JP", "LT", "LV", "NL", "NO", "PH", "PL", "RO", "SE", "SG", "SK", "TW", "US"])
+      validator = EnumAttributeValidator.new('String', ["AT", "AU", "BE", "CA", "CH", "CN", "CZ", "DE", "DK", "EE", "ES", "FR", "GB", "HK", "ID", "IE", "IN", "IT", "JP", "KR", "LT", "LV", "MO", "MY", "NL", "NO", "PH", "PL", "RO", "SE", "SG", "SK", "TW", "US"])
       unless validator.valid?(country)
         fail ArgumentError, "invalid value for \"country\", must be one of #{validator.allowable_values}."
       end
