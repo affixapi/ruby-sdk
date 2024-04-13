@@ -45,6 +45,7 @@ module OpenapiClient
     GUSTO = "gusto".freeze
     ITRENT = "itrent".freeze
     JUSTWORKS = "justworks".freeze
+    ONPAY = "onpay".freeze
     OYSTERHR = "oysterhr".freeze
     PAYCIRCLE = "paycircle".freeze
     PENTO_IO = "pento.io".freeze
