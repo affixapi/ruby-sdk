@@ -32,7 +32,6 @@ module OpenapiClient
     PAYFIT = "payfit".freeze
     PERSONIO_DE = "personio.de".freeze
     PLANDAY = "planday".freeze
-    QUICKBOOKS_UK = "quickbooks uk".freeze
     SAGEHR = "sagehr".freeze
     SAPLINGHR = "saplinghr".freeze
     STAFFOLOGY = "staffology".freeze
@@ -55,6 +54,8 @@ module OpenapiClient
     SAGEONE = "sageone".freeze
     SHAPE_PAYROLL = "shape payroll".freeze
     SIMPLEPAY_IE = "simplepay.ie".freeze
+    QUICKBOOKS_ONLINE = "quickbooks online".freeze
+    ZOHO = "zoho".freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string

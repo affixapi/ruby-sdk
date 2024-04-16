@@ -248,7 +248,7 @@ module OpenapiClient
     end
 
     # Payruns
-    # List all the pay runs that occurred during the respective period.  Supported integrations:   - sageone   - simplepay.ie   - brightpay connect 
+    # List all the pay runs that occurred during the respective period.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
     # @param start_date [Date] The start date of the search period
     # @param end_date [Date] The end date of the search period
     # @param [Hash] opts the optional parameters
@@ -259,7 +259,7 @@ module OpenapiClient
     end
 
     # Payruns
-    # List all the pay runs that occurred during the respective period.  Supported integrations:   - sageone   - simplepay.ie   - brightpay connect 
+    # List all the pay runs that occurred during the respective period.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
     # @param start_date [Date] The start date of the search period
     # @param end_date [Date] The end date of the search period
     # @param [Hash] opts the optional parameters
