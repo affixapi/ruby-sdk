@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    affixapi (1.1.58)
+    affixapi (1.1.59)
       typhoeus (~> 1.0, >= 1.0.1)
 
 GEM

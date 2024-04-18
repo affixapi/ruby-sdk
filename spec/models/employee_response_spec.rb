@@ -120,7 +120,7 @@ describe OpenapiClient::EmployeeResponse do
   describe 'test attribute "marital_status"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["single", "married", "not_specified", "null"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["single", "married", "not_specified", "other", "null"])
       # validator.allowable_values.each do |value|
       #   expect { instance.marital_status = value }.not_to raise_error
       # end

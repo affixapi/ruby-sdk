@@ -18,7 +18,7 @@
 | **tax_id** | **String** |  |  |
 | **gender** | **String** |  |  |
 | **ethnicity** | **String** |  |  |
-| **marital_status** | **String** |  |  |
+| **marital_status** | **String** | &#x60;other&#x60; option can include co-habitating, civil partnership, separated, divorced, widowed, etc  |  |
 | **date_of_birth** | **Date** |  |  |
 | **employment_status** | **String** |  |  |
 | **employment_type** | **String** |  |  |
