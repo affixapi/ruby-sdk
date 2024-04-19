@@ -92,6 +92,8 @@ module OpenapiClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'balance',
+        :'used',
         :'policy_name',
         :'policy_type',
         :'remote_created_at',
@@ -159,14 +161,6 @@ module OpenapiClient
         invalid_properties.push('invalid value for "remote_id", remote_id cannot be nil.')
       end
 
-      if @balance.nil?
-        invalid_properties.push('invalid value for "balance", balance cannot be nil.')
-      end
-
-      if @used.nil?
-        invalid_properties.push('invalid value for "used", used cannot be nil.')
-      end
-
       invalid_properties
     end
 
@@ -175,8 +169,6 @@ module OpenapiClient
     def valid?
       return false if @employee_id.nil?
       return false if @remote_id.nil?
-      return false if @balance.nil?
-      return false if @used.nil?
       policy_type_validator = EnumAttributeValidator.new('String', ["null", "vacation", "sick", "personal", "jury_duty", "volunteer", "bereavement"])
       return false unless policy_type_validator.valid?(@policy_type)
       true
