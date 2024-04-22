@@ -1,4 +1,4 @@
-# OpenapiClient::EmploymentStatusNotNull
+# OpenapiClient::EmploymentStatusNotNullNotNullable
 
 ## Properties
 
@@ -10,6 +10,6 @@
 ```ruby
 require 'openapi_client'
 
-instance = OpenapiClient::EmploymentStatusNotNull.new()
+instance = OpenapiClient::EmploymentStatusNotNullNotNullable.new()
 ```
 

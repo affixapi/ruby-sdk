@@ -25,8 +25,7 @@ docs/EmployeeResponse.md
 docs/EmployeeResponseManager.md
 docs/EmploymentNoNullEnumRequest.md
 docs/EmploymentResponse.md
-docs/EmploymentStatus.md
-docs/EmploymentStatusNotNull.md
+docs/EmploymentStatusNotNullNotNullable.md
 docs/EmploymentStatusNotNullRequest.md
 docs/EmploymentStatusResponse.md
 docs/GroupNoNullEnumRequest.md
@@ -85,8 +84,7 @@ lib/openapi_client/models/employee_response.rb
 lib/openapi_client/models/employee_response_manager.rb
 lib/openapi_client/models/employment_no_null_enum_request.rb
 lib/openapi_client/models/employment_response.rb
-lib/openapi_client/models/employment_status.rb
-lib/openapi_client/models/employment_status_not_null.rb
+lib/openapi_client/models/employment_status_not_null_not_nullable.rb
 lib/openapi_client/models/employment_status_not_null_request.rb
 lib/openapi_client/models/employment_status_response.rb
 lib/openapi_client/models/group_no_null_enum_request.rb
@@ -142,10 +140,9 @@ spec/models/employee_response_manager_spec.rb
 spec/models/employee_response_spec.rb
 spec/models/employment_no_null_enum_request_spec.rb
 spec/models/employment_response_spec.rb
+spec/models/employment_status_not_null_not_nullable_spec.rb
 spec/models/employment_status_not_null_request_spec.rb
-spec/models/employment_status_not_null_spec.rb
 spec/models/employment_status_response_spec.rb
-spec/models/employment_status_spec.rb
 spec/models/group_no_null_enum_request_spec.rb
 spec/models/group_response_spec.rb
 spec/models/id_and_message_response_spec.rb
