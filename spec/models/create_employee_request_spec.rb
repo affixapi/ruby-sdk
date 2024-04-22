@@ -124,10 +124,6 @@ describe OpenapiClient::CreateEmployeeRequest do
   describe 'test attribute "employment_status"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["active", "inactive", "pending", "leave"])
-      # validator.allowable_values.each do |value|
-      #   expect { instance.employment_status = value }.not_to raise_error
-      # end
     end
   end
 
@@ -196,6 +192,18 @@ describe OpenapiClient::CreateEmployeeRequest do
   end
 
   describe 'test attribute "groups"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "dependents"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "emergency_contacts"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

@@ -20,7 +20,7 @@
 | **ethnicity** | **String** |  |  |
 | **marital_status** | **String** | &#x60;other&#x60; option can include co-habitating, civil partnership, separated, divorced, widowed, etc  |  |
 | **date_of_birth** | **Date** |  |  |
-| **employment_status** | **String** |  |  |
+| **employment_status** | [**EmploymentStatusResponse**](EmploymentStatusResponse.md) |  |  |
 | **employment_type** | **String** |  |  |
 | **start_date** | **Date** |  |  |
 | **remote_created_at** | **Date** |  | [readonly] |
@@ -33,6 +33,8 @@
 | **employments** | [**Array&lt;EmploymentResponse&gt;**](EmploymentResponse.md) |  |  |
 | **custom_fields** | **Object** |  |  |
 | **groups** | [**Array&lt;GroupResponse&gt;**](GroupResponse.md) |  |  |
+| **dependents** | [**Array&lt;CreateEmployeeRequestDependents&gt;**](CreateEmployeeRequestDependents.md) |  |  |
+| **emergency_contacts** | [**Array&lt;CreateEmployeeRequestEmergencyContacts&gt;**](CreateEmployeeRequestEmergencyContacts.md) |  |  |
 
 ## Example
 
@@ -56,7 +58,7 @@ instance = OpenapiClient::EmployeeResponse.new(
   ethnicity: white,
   marital_status: single,
   date_of_birth: Sat Nov 10 00:00:00 UTC 1990,
-  employment_status: active,
+  employment_status: null,
   employment_type: full_time,
   start_date: Sun Oct 11 00:00:00 UTC 2020,
   remote_created_at: Sun Oct 11 00:00:00 UTC 2020,
@@ -68,7 +70,9 @@ instance = OpenapiClient::EmployeeResponse.new(
   bank_account: null,
   employments: null,
   custom_fields: {&quot;t_shirt_size&quot;:&quot;medium&quot;},
-  groups: [{&quot;id&quot;:&quot;4B9bKBpX5tnwjiG93TAqF7ci&quot;,&quot;remote_id&quot;:&quot;df6c28e8&quot;,&quot;name&quot;:&quot;backend&quot;,&quot;type&quot;:&quot;team&quot;},{&quot;id&quot;:&quot;132Xpnw2a38aaQG93TAqF7ci&quot;,&quot;remote_id&quot;:&quot;355c65922637&quot;,&quot;name&quot;:&quot;engineering&quot;,&quot;type&quot;:&quot;department&quot;}]
+  groups: [{&quot;id&quot;:&quot;4B9bKBpX5tnwjiG93TAqF7ci&quot;,&quot;remote_id&quot;:&quot;df6c28e8&quot;,&quot;name&quot;:&quot;backend&quot;,&quot;type&quot;:&quot;team&quot;},{&quot;id&quot;:&quot;132Xpnw2a38aaQG93TAqF7ci&quot;,&quot;remote_id&quot;:&quot;355c65922637&quot;,&quot;name&quot;:&quot;engineering&quot;,&quot;type&quot;:&quot;department&quot;}],
+  dependents: null,
+  emergency_contacts: null
 )
 ```
 

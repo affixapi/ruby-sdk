@@ -72,6 +72,10 @@ module OpenapiClient
 
     attr_accessor :groups
 
+    attr_accessor :dependents
+
+    attr_accessor :emergency_contacts
+
     class EnumAttributeValidator
       attr_reader :datatype
       attr_reader :allowable_values
@@ -122,7 +126,9 @@ module OpenapiClient
         :'bank_account' => :'bank_account',
         :'employments' => :'employments',
         :'custom_fields' => :'custom_fields',
-        :'groups' => :'groups'
+        :'groups' => :'groups',
+        :'dependents' => :'dependents',
+        :'emergency_contacts' => :'emergency_contacts'
       }
     end
 
@@ -148,7 +154,7 @@ module OpenapiClient
         :'ethnicity' => :'String',
         :'marital_status' => :'String',
         :'date_of_birth' => :'Date',
-        :'employment_status' => :'String',
+        :'employment_status' => :'EmploymentStatusNotNullRequest',
         :'employment_type' => :'String',
         :'start_date' => :'Date',
         :'termination_date' => :'Date',
@@ -159,7 +165,9 @@ module OpenapiClient
         :'bank_account' => :'CreateEmployeeRequestBankAccount',
         :'employments' => :'Array<EmploymentNoNullEnumRequest>',
         :'custom_fields' => :'Object',
-        :'groups' => :'Array<GroupNoNullEnumRequest>'
+        :'groups' => :'Array<GroupNoNullEnumRequest>',
+        :'dependents' => :'Array<CreateEmployeeRequestDependents>',
+        :'emergency_contacts' => :'Array<CreateEmployeeRequestEmergencyContacts>'
       }
     end
 
@@ -189,7 +197,9 @@ module OpenapiClient
         :'bank_account',
         :'employments',
         :'custom_fields',
-        :'groups'
+        :'groups',
+        :'dependents',
+        :'emergency_contacts'
       ])
     end
 
@@ -315,6 +325,18 @@ module OpenapiClient
           self.groups = value
         end
       end
+
+      if attributes.key?(:'dependents')
+        if (value = attributes[:'dependents']).is_a?(Array)
+          self.dependents = value
+        end
+      end
+
+      if attributes.key?(:'emergency_contacts')
+        if (value = attributes[:'emergency_contacts']).is_a?(Array)
+          self.emergency_contacts = value
+        end
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -343,8 +365,6 @@ module OpenapiClient
       return false unless ethnicity_validator.valid?(@ethnicity)
       marital_status_validator = EnumAttributeValidator.new('String', ["single", "married", "not_specified"])
       return false unless marital_status_validator.valid?(@marital_status)
-      employment_status_validator = EnumAttributeValidator.new('String', ["active", "inactive", "pending", "leave"])
-      return false unless employment_status_validator.valid?(@employment_status)
       employment_type_validator = EnumAttributeValidator.new('String', ["full_time", "part_time", "contractor", "other"])
       return false unless employment_type_validator.valid?(@employment_type)
       true
@@ -378,16 +398,6 @@ module OpenapiClient
         fail ArgumentError, "invalid value for \"marital_status\", must be one of #{validator.allowable_values}."
       end
       @marital_status = marital_status
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] employment_status Object to be assigned
-    def employment_status=(employment_status)
-      validator = EnumAttributeValidator.new('String', ["active", "inactive", "pending", "leave"])
-      unless validator.valid?(employment_status)
-        fail ArgumentError, "invalid value for \"employment_status\", must be one of #{validator.allowable_values}."
-      end
-      @employment_status = employment_status
     end
 
     # Custom attribute writer method checking allowed values (enum).
@@ -430,7 +440,9 @@ module OpenapiClient
           bank_account == o.bank_account &&
           employments == o.employments &&
           custom_fields == o.custom_fields &&
-          groups == o.groups
+          groups == o.groups &&
+          dependents == o.dependents &&
+          emergency_contacts == o.emergency_contacts
     end
 
     # @see the `==` method
@@ -442,7 +454,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [employee_number, first_name, last_name, display_full_name, nationality, job_title, work_email, personal_email, mobile_phone_number, tax_id, gender, ethnicity, marital_status, date_of_birth, employment_status, employment_type, start_date, termination_date, avatar, home_location, work_location, manager, bank_account, employments, custom_fields, groups].hash
+      [employee_number, first_name, last_name, display_full_name, nationality, job_title, work_email, personal_email, mobile_phone_number, tax_id, gender, ethnicity, marital_status, date_of_birth, employment_status, employment_type, start_date, termination_date, avatar, home_location, work_location, manager, bank_account, employments, custom_fields, groups, dependents, emergency_contacts].hash
     end
 
     # Builds the object from hash

@@ -18,7 +18,7 @@
 | **ethnicity** | **String** |  | [optional] |
 | **marital_status** | **String** |  | [optional] |
 | **date_of_birth** | **Date** |  | [optional] |
-| **employment_status** | **String** |  | [optional] |
+| **employment_status** | [**EmploymentStatusNotNullRequest**](EmploymentStatusNotNullRequest.md) |  | [optional] |
 | **employment_type** | **String** |  | [optional] |
 | **start_date** | **Date** |  | [optional] |
 | **termination_date** | **Date** |  | [optional] |
@@ -30,6 +30,8 @@
 | **employments** | [**Array&lt;EmploymentNoNullEnumRequest&gt;**](EmploymentNoNullEnumRequest.md) |  | [optional] |
 | **custom_fields** | **Object** |  | [optional] |
 | **groups** | [**Array&lt;GroupNoNullEnumRequest&gt;**](GroupNoNullEnumRequest.md) |  | [optional] |
+| **dependents** | [**Array&lt;CreateEmployeeRequestDependents&gt;**](CreateEmployeeRequestDependents.md) |  | [optional] |
+| **emergency_contacts** | [**Array&lt;CreateEmployeeRequestEmergencyContacts&gt;**](CreateEmployeeRequestEmergencyContacts.md) |  | [optional] |
 
 ## Example
 
@@ -51,7 +53,7 @@ instance = OpenapiClient::CreateEmployeeRequest.new(
   ethnicity: white,
   marital_status: single,
   date_of_birth: Sat Nov 10 00:00:00 UTC 1990,
-  employment_status: active,
+  employment_status: null,
   employment_type: full_time,
   start_date: Sun Oct 11 00:00:00 UTC 2020,
   termination_date: Tue Oct 12 00:00:00 UTC 2021,
@@ -62,7 +64,9 @@ instance = OpenapiClient::CreateEmployeeRequest.new(
   bank_account: null,
   employments: null,
   custom_fields: {&quot;t_shirt_size&quot;:&quot;medium&quot;},
-  groups: [{&quot;id&quot;:&quot;4B9bKBpX5tnwjiG93TAqF7ci&quot;,&quot;remote_id&quot;:&quot;df6c28e8&quot;,&quot;name&quot;:&quot;backend&quot;,&quot;type&quot;:&quot;team&quot;},{&quot;id&quot;:&quot;132Xpnw2a38aaQG93TAqF7ci&quot;,&quot;remote_id&quot;:&quot;355c65922637&quot;,&quot;name&quot;:&quot;engineering&quot;,&quot;type&quot;:&quot;department&quot;}]
+  groups: [{&quot;id&quot;:&quot;4B9bKBpX5tnwjiG93TAqF7ci&quot;,&quot;remote_id&quot;:&quot;df6c28e8&quot;,&quot;name&quot;:&quot;backend&quot;,&quot;type&quot;:&quot;team&quot;},{&quot;id&quot;:&quot;132Xpnw2a38aaQG93TAqF7ci&quot;,&quot;remote_id&quot;:&quot;355c65922637&quot;,&quot;name&quot;:&quot;engineering&quot;,&quot;type&quot;:&quot;department&quot;}],
+  dependents: null,
+  emergency_contacts: null
 )
 ```
 
