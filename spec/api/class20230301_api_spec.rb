@@ -47,7 +47,7 @@ describe 'Class20230301Api' do
   # Employees
   # List the individuals (employees, contractors, accountants, and others) listed in the HRIS/Payroll software 
   # @param [Hash] opts the optional parameters
-  # @option opts [EmploymentStatusNotNullNotNullable] :employment_status Enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set) 
+  # @option opts [EmploymentStatusNotNullNotNullable] :employment_status Optional query parameter. Use to enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set) 
   # @return [Array<EmployeeResponse>]
   describe 'xhr_employees20230301 test' do
     it 'should work' do

@@ -79,7 +79,7 @@ module OpenapiClient
     # Employees
     # List the individuals (employees, contractors, accountants, and others) listed in the HRIS/Payroll software 
     # @param [Hash] opts the optional parameters
-    # @option opts [EmploymentStatusNotNullNotNullable] :employment_status Enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set) 
+    # @option opts [EmploymentStatusNotNullNotNullable] :employment_status Optional query parameter. Use to enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set) 
     # @return [Array<EmployeeResponse>]
     def xhr_employees20230301(opts = {})
       data, _status_code, _headers = xhr_employees20230301_with_http_info(opts)
@@ -89,7 +89,7 @@ module OpenapiClient
     # Employees
     # List the individuals (employees, contractors, accountants, and others) listed in the HRIS/Payroll software 
     # @param [Hash] opts the optional parameters
-    # @option opts [EmploymentStatusNotNullNotNullable] :employment_status Enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set) 
+    # @option opts [EmploymentStatusNotNullNotNullable] :employment_status Optional query parameter. Use to enable server-side filtering of the &#x60;employment_status&#x60; attribute. Will only include individuals with that attribute explicitly set (ie if an individuals has a &#x60;null&#x60;, it will not be returned if this parameter is set) 
     # @return [Array<(Array<EmployeeResponse>, Integer, Hash)>] Array<EmployeeResponse> data, response status code and response headers
     def xhr_employees20230301_with_http_info(opts = {})
       if @api_client.config.debugging
