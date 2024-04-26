@@ -443,26 +443,40 @@ module OpenapiClient
 
     # Time off entries
     # Retrieve time off / absence entries 
+    # @param start_date [Date] The start date of the search period
+    # @param end_date [Date] The end date of the search period
     # @param [Hash] opts the optional parameters
     # @return [Array<TimeOffEntryResponse>]
-    def xhr_time_off_entries20230301(opts = {})
-      data, _status_code, _headers = xhr_time_off_entries20230301_with_http_info(opts)
+    def xhr_time_off_entries20230301(start_date, end_date, opts = {})
+      data, _status_code, _headers = xhr_time_off_entries20230301_with_http_info(start_date, end_date, opts)
       data
     end
 
     # Time off entries
     # Retrieve time off / absence entries 
+    # @param start_date [Date] The start date of the search period
+    # @param end_date [Date] The end date of the search period
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<TimeOffEntryResponse>, Integer, Hash)>] Array<TimeOffEntryResponse> data, response status code and response headers
-    def xhr_time_off_entries20230301_with_http_info(opts = {})
+    def xhr_time_off_entries20230301_with_http_info(start_date, end_date, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: Class20230301Api.xhr_time_off_entries20230301 ...'
+      end
+      # verify the required parameter 'start_date' is set
+      if @api_client.config.client_side_validation && start_date.nil?
+        fail ArgumentError, "Missing the required parameter 'start_date' when calling Class20230301Api.xhr_time_off_entries20230301"
+      end
+      # verify the required parameter 'end_date' is set
+      if @api_client.config.client_side_validation && end_date.nil?
+        fail ArgumentError, "Missing the required parameter 'end_date' when calling Class20230301Api.xhr_time_off_entries20230301"
       end
       # resource path
       local_var_path = '/2023-03-01/xhr/time-off-entries'
 
       # query parameters
       query_params = opts[:query_params] || {}
+      query_params[:'start_date'] = start_date
+      query_params[:'end_date'] = end_date
 
       # header parameters
       header_params = opts[:header_params] || {}
@@ -500,26 +514,40 @@ module OpenapiClient
 
     # Timesheets
     # Retrieve Timesheets 
+    # @param start_date [Date] The start date of the search period
+    # @param end_date [Date] The end date of the search period
     # @param [Hash] opts the optional parameters
     # @return [Array<TimesheetResponse>]
-    def xhr_timesheets20230301(opts = {})
-      data, _status_code, _headers = xhr_timesheets20230301_with_http_info(opts)
+    def xhr_timesheets20230301(start_date, end_date, opts = {})
+      data, _status_code, _headers = xhr_timesheets20230301_with_http_info(start_date, end_date, opts)
       data
     end
 
     # Timesheets
     # Retrieve Timesheets 
+    # @param start_date [Date] The start date of the search period
+    # @param end_date [Date] The end date of the search period
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<TimesheetResponse>, Integer, Hash)>] Array<TimesheetResponse> data, response status code and response headers
-    def xhr_timesheets20230301_with_http_info(opts = {})
+    def xhr_timesheets20230301_with_http_info(start_date, end_date, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: Class20230301Api.xhr_timesheets20230301 ...'
+      end
+      # verify the required parameter 'start_date' is set
+      if @api_client.config.client_side_validation && start_date.nil?
+        fail ArgumentError, "Missing the required parameter 'start_date' when calling Class20230301Api.xhr_timesheets20230301"
+      end
+      # verify the required parameter 'end_date' is set
+      if @api_client.config.client_side_validation && end_date.nil?
+        fail ArgumentError, "Missing the required parameter 'end_date' when calling Class20230301Api.xhr_timesheets20230301"
       end
       # resource path
       local_var_path = '/2023-03-01/xhr/timesheets'
 
       # query parameters
       query_params = opts[:query_params] || {}
+      query_params[:'start_date'] = start_date
+      query_params[:'end_date'] = end_date
 
       # header parameters
       header_params = opts[:header_params] || {}

@@ -116,6 +116,8 @@ describe 'XHRVerticallyIntegratedApi' do
   # unit tests for xhr_time_off_entries20230301
   # Time off entries
   # Retrieve time off / absence entries 
+  # @param start_date The start date of the search period
+  # @param end_date The end date of the search period
   # @param [Hash] opts the optional parameters
   # @return [Array<TimeOffEntryResponse>]
   describe 'xhr_time_off_entries20230301 test' do
@@ -127,6 +129,8 @@ describe 'XHRVerticallyIntegratedApi' do
   # unit tests for xhr_timesheets20230301
   # Timesheets
   # Retrieve Timesheets 
+  # @param start_date The start date of the search period
+  # @param end_date The end date of the search period
   # @param [Hash] opts the optional parameters
   # @return [Array<TimesheetResponse>]
   describe 'xhr_timesheets20230301 test' do
