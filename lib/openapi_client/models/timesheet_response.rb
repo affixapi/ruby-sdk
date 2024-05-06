@@ -24,6 +24,9 @@ module OpenapiClient
     # the Affix-assigned id of the individual
     attr_accessor :employee_id
 
+    # the remote system-assigned id of the individual
+    attr_accessor :remote_employee_id
+
     attr_accessor :start_time
 
     attr_accessor :end_time
@@ -40,6 +43,7 @@ module OpenapiClient
         :'id' => :'id',
         :'remote_id' => :'remote_id',
         :'employee_id' => :'employee_id',
+        :'remote_employee_id' => :'remote_employee_id',
         :'start_time' => :'start_time',
         :'end_time' => :'end_time',
         :'hours_worked' => :'hours_worked',
@@ -59,6 +63,7 @@ module OpenapiClient
         :'id' => :'String',
         :'remote_id' => :'String',
         :'employee_id' => :'String',
+        :'remote_employee_id' => :'String',
         :'start_time' => :'Time',
         :'end_time' => :'Time',
         :'hours_worked' => :'Float',
@@ -104,6 +109,10 @@ module OpenapiClient
         self.employee_id = attributes[:'employee_id']
       end
 
+      if attributes.key?(:'remote_employee_id')
+        self.remote_employee_id = attributes[:'remote_employee_id']
+      end
+
       if attributes.key?(:'start_time')
         self.start_time = attributes[:'start_time']
       end
@@ -141,6 +150,10 @@ module OpenapiClient
         invalid_properties.push('invalid value for "employee_id", employee_id cannot be nil.')
       end
 
+      if @remote_employee_id.nil?
+        invalid_properties.push('invalid value for "remote_employee_id", remote_employee_id cannot be nil.')
+      end
+
       if @hours_worked.nil?
         invalid_properties.push('invalid value for "hours_worked", hours_worked cannot be nil.')
       end
@@ -154,6 +167,7 @@ module OpenapiClient
       return false if @id.nil?
       return false if @remote_id.nil?
       return false if @employee_id.nil?
+      return false if @remote_employee_id.nil?
       return false if @hours_worked.nil?
       true
     end
@@ -176,6 +190,7 @@ module OpenapiClient
           id == o.id &&
           remote_id == o.remote_id &&
           employee_id == o.employee_id &&
+          remote_employee_id == o.remote_employee_id &&
           start_time == o.start_time &&
           end_time == o.end_time &&
           hours_worked == o.hours_worked &&
@@ -192,7 +207,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, remote_id, employee_id, start_time, end_time, hours_worked, remote_created_at, remote_modified_at].hash
+      [id, remote_id, employee_id, remote_employee_id, start_time, end_time, hours_worked, remote_created_at, remote_modified_at].hash
     end
 
     # Builds the object from hash

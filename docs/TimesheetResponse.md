@@ -7,6 +7,7 @@
 | **id** | **String** | The Affix-assigned id of the time off entry |  |
 | **remote_id** | **String** | the remote system-assigned id of the time off entry |  |
 | **employee_id** | **String** | the Affix-assigned id of the individual |  |
+| **remote_employee_id** | **String** | the remote system-assigned id of the individual |  |
 | **start_time** | **Time** |  |  |
 | **end_time** | **Time** |  |  |
 | **hours_worked** | **Float** |  |  |
@@ -22,6 +23,7 @@ instance = OpenapiClient::TimesheetResponse.new(
   id: cD0yMDIxLTAxLTA2KzAzJTNBMjQlM0E1My40MzQzMjYlMkIwMCUzQTAw,
   remote_id: 19202938,
   employee_id: cD0yMDIxLTAxLTA2KzAzJTNBMjQlM0E1My40MzQzMjYlMkIwMCUzQTAw,
+  remote_employee_id: 19202938,
   start_time: 2020-10-11T08:00Z,
   end_time: 2020-10-11T17:00Z,
   hours_worked: 8,

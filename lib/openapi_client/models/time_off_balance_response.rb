@@ -19,7 +19,7 @@ module OpenapiClient
     attr_accessor :employee_id
 
     # the remote system-assigned id of the individual
-    attr_accessor :remote_id
+    attr_accessor :remote_employee_id
 
     attr_accessor :balance
 
@@ -60,7 +60,7 @@ module OpenapiClient
     def self.attribute_map
       {
         :'employee_id' => :'employee_id',
-        :'remote_id' => :'remote_id',
+        :'remote_employee_id' => :'remote_employee_id',
         :'balance' => :'balance',
         :'used' => :'used',
         :'policy_name' => :'policy_name',
@@ -79,7 +79,7 @@ module OpenapiClient
     def self.openapi_types
       {
         :'employee_id' => :'String',
-        :'remote_id' => :'String',
+        :'remote_employee_id' => :'String',
         :'balance' => :'Float',
         :'used' => :'Float',
         :'policy_name' => :'String',
@@ -120,8 +120,8 @@ module OpenapiClient
         self.employee_id = attributes[:'employee_id']
       end
 
-      if attributes.key?(:'remote_id')
-        self.remote_id = attributes[:'remote_id']
+      if attributes.key?(:'remote_employee_id')
+        self.remote_employee_id = attributes[:'remote_employee_id']
       end
 
       if attributes.key?(:'balance')
@@ -157,8 +157,8 @@ module OpenapiClient
         invalid_properties.push('invalid value for "employee_id", employee_id cannot be nil.')
       end
 
-      if @remote_id.nil?
-        invalid_properties.push('invalid value for "remote_id", remote_id cannot be nil.')
+      if @remote_employee_id.nil?
+        invalid_properties.push('invalid value for "remote_employee_id", remote_employee_id cannot be nil.')
       end
 
       invalid_properties
@@ -168,7 +168,7 @@ module OpenapiClient
     # @return true if the model is valid
     def valid?
       return false if @employee_id.nil?
-      return false if @remote_id.nil?
+      return false if @remote_employee_id.nil?
       policy_type_validator = EnumAttributeValidator.new('String', ["null", "vacation", "sick", "personal", "jury_duty", "volunteer", "bereavement"])
       return false unless policy_type_validator.valid?(@policy_type)
       true
@@ -190,7 +190,7 @@ module OpenapiClient
       return true if self.equal?(o)
       self.class == o.class &&
           employee_id == o.employee_id &&
-          remote_id == o.remote_id &&
+          remote_employee_id == o.remote_employee_id &&
           balance == o.balance &&
           used == o.used &&
           policy_name == o.policy_name &&
@@ -208,7 +208,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [employee_id, remote_id, balance, used, policy_name, policy_type, remote_created_at, remote_modified_at].hash
+      [employee_id, remote_employee_id, balance, used, policy_name, policy_type, remote_created_at, remote_modified_at].hash
     end
 
     # Builds the object from hash

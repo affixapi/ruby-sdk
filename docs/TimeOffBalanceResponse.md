@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **employee_id** | **String** | The Affix-assigned id of the individual |  |
-| **remote_id** | **String** | the remote system-assigned id of the individual |  |
+| **remote_employee_id** | **String** | the remote system-assigned id of the individual |  |
 | **balance** | **Float** |  |  |
 | **used** | **Float** |  |  |
 | **policy_name** | **String** | The name of the policy, as assigned by the remote system |  |
@@ -20,7 +20,7 @@ require 'openapi_client'
 
 instance = OpenapiClient::TimeOffBalanceResponse.new(
   employee_id: cD0yMDIxLTAxLTA2KzAzJTNBMjQlM0E1My40MzQzMjYlMkIwMCUzQTAw,
-  remote_id: 19202938,
+  remote_employee_id: 19202938,
   balance: 24.5,
   used: 12,
   policy_name: Comp/In Lieu Time,
