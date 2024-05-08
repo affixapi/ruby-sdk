@@ -17,6 +17,7 @@ module OpenapiClient
   class PolicyTypeResponse
     NULL = "null".freeze
     VACATION = "vacation".freeze
+    HOLIDAY = "holiday".freeze
     SICK = "sick".freeze
     PERSONAL = "personal".freeze
     JURY_DUTY = "jury_duty".freeze
