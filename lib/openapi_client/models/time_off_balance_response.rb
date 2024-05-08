@@ -19,11 +19,17 @@ module OpenapiClient
     attr_accessor :employee_id
 
     # the remote system-assigned id of the individual
-    attr_accessor :remote_employee_id
+    attr_accessor :employee_remote_id
 
     attr_accessor :balance
 
     attr_accessor :used
+
+    # The Affix-assigned id of the policy
+    attr_accessor :policy_id
+
+    # The remote system-assigned id of the policy
+    attr_accessor :policy_remote_id
 
     # The name of the policy, as assigned by the remote system
     attr_accessor :policy_name
@@ -34,35 +40,15 @@ module OpenapiClient
 
     attr_accessor :remote_modified_at
 
-    class EnumAttributeValidator
-      attr_reader :datatype
-      attr_reader :allowable_values
-
-      def initialize(datatype, allowable_values)
-        @allowable_values = allowable_values.map do |value|
-          case datatype.to_s
-          when /Integer/i
-            value.to_i
-          when /Float/i
-            value.to_f
-          else
-            value
-          end
-        end
-      end
-
-      def valid?(value)
-        !value || allowable_values.include?(value)
-      end
-    end
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'employee_id' => :'employee_id',
-        :'remote_employee_id' => :'remote_employee_id',
+        :'employee_remote_id' => :'employee_remote_id',
         :'balance' => :'balance',
         :'used' => :'used',
+        :'policy_id' => :'policy_id',
+        :'policy_remote_id' => :'policy_remote_id',
         :'policy_name' => :'policy_name',
         :'policy_type' => :'policy_type',
         :'remote_created_at' => :'remote_created_at',
@@ -79,11 +65,13 @@ module OpenapiClient
     def self.openapi_types
       {
         :'employee_id' => :'String',
-        :'remote_employee_id' => :'String',
+        :'employee_remote_id' => :'String',
         :'balance' => :'Float',
         :'used' => :'Float',
+        :'policy_id' => :'String',
+        :'policy_remote_id' => :'String',
         :'policy_name' => :'String',
-        :'policy_type' => :'String',
+        :'policy_type' => :'PolicyTypeResponse',
         :'remote_created_at' => :'Date',
         :'remote_modified_at' => :'Date'
       }
@@ -94,6 +82,8 @@ module OpenapiClient
       Set.new([
         :'balance',
         :'used',
+        :'policy_id',
+        :'policy_remote_id',
         :'policy_name',
         :'policy_type',
         :'remote_created_at',
@@ -120,8 +110,8 @@ module OpenapiClient
         self.employee_id = attributes[:'employee_id']
       end
 
-      if attributes.key?(:'remote_employee_id')
-        self.remote_employee_id = attributes[:'remote_employee_id']
+      if attributes.key?(:'employee_remote_id')
+        self.employee_remote_id = attributes[:'employee_remote_id']
       end
 
       if attributes.key?(:'balance')
@@ -130,6 +120,14 @@ module OpenapiClient
 
       if attributes.key?(:'used')
         self.used = attributes[:'used']
+      end
+
+      if attributes.key?(:'policy_id')
+        self.policy_id = attributes[:'policy_id']
+      end
+
+      if attributes.key?(:'policy_remote_id')
+        self.policy_remote_id = attributes[:'policy_remote_id']
       end
 
       if attributes.key?(:'policy_name')
@@ -157,8 +155,8 @@ module OpenapiClient
         invalid_properties.push('invalid value for "employee_id", employee_id cannot be nil.')
       end
 
-      if @remote_employee_id.nil?
-        invalid_properties.push('invalid value for "remote_employee_id", remote_employee_id cannot be nil.')
+      if @employee_remote_id.nil?
+        invalid_properties.push('invalid value for "employee_remote_id", employee_remote_id cannot be nil.')
       end
 
       invalid_properties
@@ -168,20 +166,8 @@ module OpenapiClient
     # @return true if the model is valid
     def valid?
       return false if @employee_id.nil?
-      return false if @remote_employee_id.nil?
-      policy_type_validator = EnumAttributeValidator.new('String', ["null", "vacation", "sick", "personal", "jury_duty", "volunteer", "bereavement"])
-      return false unless policy_type_validator.valid?(@policy_type)
+      return false if @employee_remote_id.nil?
       true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] policy_type Object to be assigned
-    def policy_type=(policy_type)
-      validator = EnumAttributeValidator.new('String', ["null", "vacation", "sick", "personal", "jury_duty", "volunteer", "bereavement"])
-      unless validator.valid?(policy_type)
-        fail ArgumentError, "invalid value for \"policy_type\", must be one of #{validator.allowable_values}."
-      end
-      @policy_type = policy_type
     end
 
     # Checks equality by comparing each attribute.
@@ -190,9 +176,11 @@ module OpenapiClient
       return true if self.equal?(o)
       self.class == o.class &&
           employee_id == o.employee_id &&
-          remote_employee_id == o.remote_employee_id &&
+          employee_remote_id == o.employee_remote_id &&
           balance == o.balance &&
           used == o.used &&
+          policy_id == o.policy_id &&
+          policy_remote_id == o.policy_remote_id &&
           policy_name == o.policy_name &&
           policy_type == o.policy_type &&
           remote_created_at == o.remote_created_at &&
@@ -208,7 +196,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [employee_id, remote_employee_id, balance, used, policy_name, policy_type, remote_created_at, remote_modified_at].hash
+      [employee_id, employee_remote_id, balance, used, policy_id, policy_remote_id, policy_name, policy_type, remote_created_at, remote_modified_at].hash
     end
 
     # Builds the object from hash

@@ -43,7 +43,7 @@ describe OpenapiClient::TimeOffEntryResponse do
     end
   end
 
-  describe 'test attribute "remote_employee_id"' do
+  describe 'test attribute "employee_remote_id"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -93,7 +93,25 @@ describe OpenapiClient::TimeOffEntryResponse do
     end
   end
 
-  describe 'test attribute "request_type"' do
+  describe 'test attribute "policy_id"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "policy_remote_id"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "policy_name"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "policy_type"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

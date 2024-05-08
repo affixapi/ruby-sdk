@@ -358,6 +358,7 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::PayslipResponseDeductions](docs/PayslipResponseDeductions.md)
  - [OpenapiClient::PayslipResponseEarnings](docs/PayslipResponseEarnings.md)
  - [OpenapiClient::PayslipResponseTaxes](docs/PayslipResponseTaxes.md)
+ - [OpenapiClient::PolicyTypeResponse](docs/PolicyTypeResponse.md)
  - [OpenapiClient::ProviderRequest](docs/ProviderRequest.md)
  - [OpenapiClient::ProviderResponse](docs/ProviderResponse.md)
  - [OpenapiClient::ScopesRequest](docs/ScopesRequest.md)

@@ -31,7 +31,7 @@ describe OpenapiClient::TimeOffBalanceResponse do
     end
   end
 
-  describe 'test attribute "remote_employee_id"' do
+  describe 'test attribute "employee_remote_id"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -49,6 +49,18 @@ describe OpenapiClient::TimeOffBalanceResponse do
     end
   end
 
+  describe 'test attribute "policy_id"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "policy_remote_id"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   describe 'test attribute "policy_name"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
@@ -58,10 +70,6 @@ describe OpenapiClient::TimeOffBalanceResponse do
   describe 'test attribute "policy_type"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["null", "vacation", "sick", "personal", "jury_duty", "volunteer", "bereavement"])
-      # validator.allowable_values.each do |value|
-      #   expect { instance.policy_type = value }.not_to raise_error
-      # end
     end
   end
 

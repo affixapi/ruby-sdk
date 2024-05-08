@@ -25,7 +25,7 @@ module OpenapiClient
     attr_accessor :employee_id
 
     # the remote system-assigned id of the individual
-    attr_accessor :remote_employee_id
+    attr_accessor :employee_remote_id
 
     attr_accessor :start_date
 
@@ -39,7 +39,16 @@ module OpenapiClient
 
     attr_accessor :employee_note
 
-    attr_accessor :request_type
+    # The Affix-assigned id of the policy
+    attr_accessor :policy_id
+
+    # The remote system-assigned id of the policy
+    attr_accessor :policy_remote_id
+
+    # The name of the policy, as assigned by the remote system
+    attr_accessor :policy_name
+
+    attr_accessor :policy_type
 
     attr_accessor :remote_created_at
 
@@ -73,14 +82,17 @@ module OpenapiClient
         :'id' => :'id',
         :'remote_id' => :'remote_id',
         :'employee_id' => :'employee_id',
-        :'remote_employee_id' => :'remote_employee_id',
+        :'employee_remote_id' => :'employee_remote_id',
         :'start_date' => :'start_date',
         :'end_date' => :'end_date',
         :'amount' => :'amount',
         :'unit' => :'unit',
         :'status' => :'status',
         :'employee_note' => :'employee_note',
-        :'request_type' => :'request_type',
+        :'policy_id' => :'policy_id',
+        :'policy_remote_id' => :'policy_remote_id',
+        :'policy_name' => :'policy_name',
+        :'policy_type' => :'policy_type',
         :'remote_created_at' => :'remote_created_at',
         :'remote_modified_at' => :'remote_modified_at'
       }
@@ -97,14 +109,17 @@ module OpenapiClient
         :'id' => :'String',
         :'remote_id' => :'String',
         :'employee_id' => :'String',
-        :'remote_employee_id' => :'String',
+        :'employee_remote_id' => :'String',
         :'start_date' => :'Date',
         :'end_date' => :'Date',
         :'amount' => :'Float',
         :'unit' => :'String',
         :'status' => :'String',
         :'employee_note' => :'String',
-        :'request_type' => :'String',
+        :'policy_id' => :'String',
+        :'policy_remote_id' => :'String',
+        :'policy_name' => :'String',
+        :'policy_type' => :'PolicyTypeResponse',
         :'remote_created_at' => :'Date',
         :'remote_modified_at' => :'Date'
       }
@@ -117,7 +132,10 @@ module OpenapiClient
         :'end_date',
         :'status',
         :'employee_note',
-        :'request_type',
+        :'policy_id',
+        :'policy_remote_id',
+        :'policy_name',
+        :'policy_type',
         :'remote_created_at',
         :'remote_modified_at'
       ])
@@ -150,8 +168,8 @@ module OpenapiClient
         self.employee_id = attributes[:'employee_id']
       end
 
-      if attributes.key?(:'remote_employee_id')
-        self.remote_employee_id = attributes[:'remote_employee_id']
+      if attributes.key?(:'employee_remote_id')
+        self.employee_remote_id = attributes[:'employee_remote_id']
       end
 
       if attributes.key?(:'start_date')
@@ -178,8 +196,20 @@ module OpenapiClient
         self.employee_note = attributes[:'employee_note']
       end
 
-      if attributes.key?(:'request_type')
-        self.request_type = attributes[:'request_type']
+      if attributes.key?(:'policy_id')
+        self.policy_id = attributes[:'policy_id']
+      end
+
+      if attributes.key?(:'policy_remote_id')
+        self.policy_remote_id = attributes[:'policy_remote_id']
+      end
+
+      if attributes.key?(:'policy_name')
+        self.policy_name = attributes[:'policy_name']
+      end
+
+      if attributes.key?(:'policy_type')
+        self.policy_type = attributes[:'policy_type']
       end
 
       if attributes.key?(:'remote_created_at')
@@ -207,8 +237,8 @@ module OpenapiClient
         invalid_properties.push('invalid value for "employee_id", employee_id cannot be nil.')
       end
 
-      if @remote_employee_id.nil?
-        invalid_properties.push('invalid value for "remote_employee_id", remote_employee_id cannot be nil.')
+      if @employee_remote_id.nil?
+        invalid_properties.push('invalid value for "employee_remote_id", employee_remote_id cannot be nil.')
       end
 
       if @amount.nil?
@@ -228,7 +258,7 @@ module OpenapiClient
       return false if @id.nil?
       return false if @remote_id.nil?
       return false if @employee_id.nil?
-      return false if @remote_employee_id.nil?
+      return false if @employee_remote_id.nil?
       return false if @amount.nil?
       return false if @unit.nil?
       unit_validator = EnumAttributeValidator.new('String', ["null", "hours", "days", "months"])
@@ -276,14 +306,17 @@ module OpenapiClient
           id == o.id &&
           remote_id == o.remote_id &&
           employee_id == o.employee_id &&
-          remote_employee_id == o.remote_employee_id &&
+          employee_remote_id == o.employee_remote_id &&
           start_date == o.start_date &&
           end_date == o.end_date &&
           amount == o.amount &&
           unit == o.unit &&
           status == o.status &&
           employee_note == o.employee_note &&
-          request_type == o.request_type &&
+          policy_id == o.policy_id &&
+          policy_remote_id == o.policy_remote_id &&
+          policy_name == o.policy_name &&
+          policy_type == o.policy_type &&
           remote_created_at == o.remote_created_at &&
           remote_modified_at == o.remote_modified_at
     end
@@ -297,7 +330,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, remote_id, employee_id, remote_employee_id, start_date, end_date, amount, unit, status, employee_note, request_type, remote_created_at, remote_modified_at].hash
+      [id, remote_id, employee_id, employee_remote_id, start_date, end_date, amount, unit, status, employee_note, policy_id, policy_remote_id, policy_name, policy_type, remote_created_at, remote_modified_at].hash
     end
 
     # Builds the object from hash
