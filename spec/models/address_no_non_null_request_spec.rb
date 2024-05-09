@@ -46,7 +46,7 @@ describe OpenapiClient::AddressNoNonNullRequest do
   describe 'test attribute "country"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["BZ", "CA", "CR", "GT", "MX", "PA", "SV", "US", "AR", "BR", "CL", "PE", "AT", "BE", "CH", "CY", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GB", "GR", "IE", "IM", "IS", "IT", "LI", "LT", "LU", "LV", "NL", "NO", "PH", "PL", "RO", "RU", "SE", "SK", "CN", "HK", "ID", "IL", "IN", "JP", "KR", "MO", "MY", "PH", "PS", "SG", "TH", "TR", "TW", "VN", "ZA", "AU", "NZ"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["BZ", "CA", "CR", "GT", "MX", "PA", "SV", "US", "AR", "BR", "CL", "PE", "AT", "BE", "CH", "CY", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GB", "GR", "IE", "IM", "IS", "IT", "LI", "LT", "LU", "LV", "NL", "NO", "PL", "RO", "RU", "SE", "SK", "CN", "HK", "ID", "IL", "IN", "JP", "KR", "MO", "MY", "PH", "PS", "SG", "TH", "TR", "TW", "VN", "ZA", "AU", "NZ"])
       # validator.allowable_values.each do |value|
       #   expect { instance.country = value }.not_to raise_error
       # end
