@@ -133,7 +133,7 @@ module OpenapiClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      country_validator = EnumAttributeValidator.new('String', ["null", "BZ", "CA", "CR", "GT", "MX", "PA", "SV", "US", "AR", "BR", "CL", "PE", "AT", "AU", "BE", "CH", "CY", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GB", "GR", "IE", "IM", "IS", "IT", "LI", "LT", "LU", "LV", "NL", "NO", "PH", "PL", "RO", "RU", "SE", "SK", "CN", "HK", "ID", "IL", "IN", "JP", "KR", "MO", "MY", "PH", "PS", "SG", "TH", "TR", "TW", "VN", "ZA", "AU", "NZ"])
+      country_validator = EnumAttributeValidator.new('String', ["null", "BZ", "CA", "CR", "GT", "MX", "PA", "SV", "US", "AR", "BR", "CL", "PE", "AT", "BE", "CH", "CY", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GB", "GR", "IE", "IM", "IS", "IT", "LI", "LT", "LU", "LV", "NL", "NO", "PH", "PL", "RO", "RU", "SE", "SK", "CN", "HK", "ID", "IL", "IN", "JP", "KR", "MO", "MY", "PH", "PS", "SG", "TH", "TR", "TW", "VN", "ZA", "AU", "NZ"])
       return false unless country_validator.valid?(@country)
       true
     end
@@ -141,7 +141,7 @@ module OpenapiClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] country Object to be assigned
     def country=(country)
-      validator = EnumAttributeValidator.new('String', ["null", "BZ", "CA", "CR", "GT", "MX", "PA", "SV", "US", "AR", "BR", "CL", "PE", "AT", "AU", "BE", "CH", "CY", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GB", "GR", "IE", "IM", "IS", "IT", "LI", "LT", "LU", "LV", "NL", "NO", "PH", "PL", "RO", "RU", "SE", "SK", "CN", "HK", "ID", "IL", "IN", "JP", "KR", "MO", "MY", "PH", "PS", "SG", "TH", "TR", "TW", "VN", "ZA", "AU", "NZ"])
+      validator = EnumAttributeValidator.new('String', ["null", "BZ", "CA", "CR", "GT", "MX", "PA", "SV", "US", "AR", "BR", "CL", "PE", "AT", "BE", "CH", "CY", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GB", "GR", "IE", "IM", "IS", "IT", "LI", "LT", "LU", "LV", "NL", "NO", "PH", "PL", "RO", "RU", "SE", "SK", "CN", "HK", "ID", "IL", "IN", "JP", "KR", "MO", "MY", "PH", "PS", "SG", "TH", "TR", "TW", "VN", "ZA", "AU", "NZ"])
       unless validator.valid?(country)
         fail ArgumentError, "invalid value for \"country\", must be one of #{validator.allowable_values}."
       end

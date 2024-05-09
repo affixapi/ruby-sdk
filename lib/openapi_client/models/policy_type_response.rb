@@ -16,13 +16,13 @@ require 'time'
 module OpenapiClient
   class PolicyTypeResponse
     NULL = "null".freeze
-    VACATION = "vacation".freeze
-    HOLIDAY = "holiday".freeze
-    SICK = "sick".freeze
-    PERSONAL = "personal".freeze
-    JURY_DUTY = "jury_duty".freeze
-    VOLUNTEER = "volunteer".freeze
     BEREAVEMENT = "bereavement".freeze
+    HOLIDAY = "holiday".freeze
+    JURY_DUTY = "jury_duty".freeze
+    PERSONAL = "personal".freeze
+    SICK = "sick".freeze
+    VACATION = "vacation".freeze
+    VOLUNTEER = "volunteer".freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string
