@@ -66,7 +66,9 @@ module OpenapiClient
 
     attr_accessor :bank_account
 
-    attr_accessor :employments
+    attr_accessor :employment_history
+
+    attr_accessor :compensation_history
 
     attr_accessor :custom_fields
 
@@ -124,7 +126,8 @@ module OpenapiClient
         :'work_location' => :'work_location',
         :'manager' => :'manager',
         :'bank_account' => :'bank_account',
-        :'employments' => :'employments',
+        :'employment_history' => :'employment_history',
+        :'compensation_history' => :'compensation_history',
         :'custom_fields' => :'custom_fields',
         :'groups' => :'groups',
         :'dependents' => :'dependents',
@@ -163,7 +166,8 @@ module OpenapiClient
         :'work_location' => :'LocationNoNonNullRequest',
         :'manager' => :'CreateEmployeeRequestManager',
         :'bank_account' => :'CreateEmployeeRequestBankAccount',
-        :'employments' => :'Array<EmploymentNoNullEnumRequest>',
+        :'employment_history' => :'Array<EmploymentHistoryNoNonNullRequest>',
+        :'compensation_history' => :'Array<CompensationHistoryNoNonNullRequest>',
         :'custom_fields' => :'Object',
         :'groups' => :'Array<GroupNoNullEnumRequest>',
         :'dependents' => :'Array<CreateEmployeeRequestDependents>',
@@ -195,7 +199,8 @@ module OpenapiClient
         :'work_location',
         :'manager',
         :'bank_account',
-        :'employments',
+        :'employment_history',
+        :'compensation_history',
         :'custom_fields',
         :'groups',
         :'dependents',
@@ -310,9 +315,15 @@ module OpenapiClient
         self.bank_account = attributes[:'bank_account']
       end
 
-      if attributes.key?(:'employments')
-        if (value = attributes[:'employments']).is_a?(Array)
-          self.employments = value
+      if attributes.key?(:'employment_history')
+        if (value = attributes[:'employment_history']).is_a?(Array)
+          self.employment_history = value
+        end
+      end
+
+      if attributes.key?(:'compensation_history')
+        if (value = attributes[:'compensation_history']).is_a?(Array)
+          self.compensation_history = value
         end
       end
 
@@ -438,7 +449,8 @@ module OpenapiClient
           work_location == o.work_location &&
           manager == o.manager &&
           bank_account == o.bank_account &&
-          employments == o.employments &&
+          employment_history == o.employment_history &&
+          compensation_history == o.compensation_history &&
           custom_fields == o.custom_fields &&
           groups == o.groups &&
           dependents == o.dependents &&
@@ -454,7 +466,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [employee_number, first_name, last_name, display_full_name, nationality, job_title, work_email, personal_email, mobile_phone_number, tax_id, gender, ethnicity, marital_status, date_of_birth, employment_status, employment_type, start_date, termination_date, avatar, home_location, work_location, manager, bank_account, employments, custom_fields, groups, dependents, emergency_contacts].hash
+      [employee_number, first_name, last_name, display_full_name, nationality, job_title, work_email, personal_email, mobile_phone_number, tax_id, gender, ethnicity, marital_status, date_of_birth, employment_status, employment_type, start_date, termination_date, avatar, home_location, work_location, manager, bank_account, employment_history, compensation_history, custom_fields, groups, dependents, emergency_contacts].hash
     end
 
     # Builds the object from hash

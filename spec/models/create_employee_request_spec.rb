@@ -179,7 +179,13 @@ describe OpenapiClient::CreateEmployeeRequest do
     end
   end
 
-  describe 'test attribute "employments"' do
+  describe 'test attribute "employment_history"' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "compensation_history"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

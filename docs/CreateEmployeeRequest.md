@@ -27,7 +27,8 @@
 | **work_location** | [**LocationNoNonNullRequest**](LocationNoNonNullRequest.md) |  | [optional] |
 | **manager** | [**CreateEmployeeRequestManager**](CreateEmployeeRequestManager.md) |  | [optional] |
 | **bank_account** | [**CreateEmployeeRequestBankAccount**](CreateEmployeeRequestBankAccount.md) |  | [optional] |
-| **employments** | [**Array&lt;EmploymentNoNullEnumRequest&gt;**](EmploymentNoNullEnumRequest.md) |  | [optional] |
+| **employment_history** | [**Array&lt;EmploymentHistoryNoNonNullRequest&gt;**](EmploymentHistoryNoNonNullRequest.md) |  | [optional] |
+| **compensation_history** | [**Array&lt;CompensationHistoryNoNonNullRequest&gt;**](CompensationHistoryNoNonNullRequest.md) |  | [optional] |
 | **custom_fields** | **Object** |  | [optional] |
 | **groups** | [**Array&lt;GroupNoNullEnumRequest&gt;**](GroupNoNullEnumRequest.md) |  | [optional] |
 | **dependents** | [**Array&lt;CreateEmployeeRequestDependents&gt;**](CreateEmployeeRequestDependents.md) |  | [optional] |
@@ -62,7 +63,8 @@ instance = OpenapiClient::CreateEmployeeRequest.new(
   work_location: null,
   manager: null,
   bank_account: null,
-  employments: null,
+  employment_history: null,
+  compensation_history: null,
   custom_fields: {&quot;t_shirt_size&quot;:&quot;medium&quot;},
   groups: [{&quot;id&quot;:&quot;4B9bKBpX5tnwjiG93TAqF7ci&quot;,&quot;remote_id&quot;:&quot;df6c28e8&quot;,&quot;name&quot;:&quot;backend&quot;,&quot;type&quot;:&quot;team&quot;},{&quot;id&quot;:&quot;132Xpnw2a38aaQG93TAqF7ci&quot;,&quot;remote_id&quot;:&quot;355c65922637&quot;,&quot;name&quot;:&quot;engineering&quot;,&quot;type&quot;:&quot;department&quot;}],
   dependents: null,

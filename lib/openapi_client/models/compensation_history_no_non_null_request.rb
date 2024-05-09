@@ -14,9 +14,7 @@ require 'date'
 require 'time'
 
 module OpenapiClient
-  class EmploymentResponse
-    attr_accessor :job_title
-
+  class CompensationHistoryNoNonNullRequest
     attr_accessor :pay_rate
 
     attr_accessor :pay_period
@@ -54,7 +52,6 @@ module OpenapiClient
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'job_title' => :'job_title',
         :'pay_rate' => :'pay_rate',
         :'pay_period' => :'pay_period',
         :'pay_frequency' => :'pay_frequency',
@@ -72,12 +69,11 @@ module OpenapiClient
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'job_title' => :'String',
         :'pay_rate' => :'Float',
         :'pay_period' => :'String',
         :'pay_frequency' => :'String',
         :'employment_type' => :'String',
-        :'currency' => :'CurrencyResponse',
+        :'currency' => :'CurrencyRequest',
         :'effective_date' => :'Date'
       }
     end
@@ -85,13 +81,7 @@ module OpenapiClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'job_title',
-        :'pay_rate',
-        :'pay_period',
-        :'pay_frequency',
-        :'employment_type',
         :'currency',
-        :'effective_date'
       ])
     end
 
@@ -99,20 +89,16 @@ module OpenapiClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `OpenapiClient::EmploymentResponse` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `OpenapiClient::CompensationHistoryNoNonNullRequest` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `OpenapiClient::EmploymentResponse`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `OpenapiClient::CompensationHistoryNoNonNullRequest`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
-
-      if attributes.key?(:'job_title')
-        self.job_title = attributes[:'job_title']
-      end
 
       if attributes.key?(:'pay_rate')
         self.pay_rate = attributes[:'pay_rate']
@@ -143,23 +129,48 @@ module OpenapiClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @pay_rate.nil?
+        invalid_properties.push('invalid value for "pay_rate", pay_rate cannot be nil.')
+      end
+
+      if @pay_period.nil?
+        invalid_properties.push('invalid value for "pay_period", pay_period cannot be nil.')
+      end
+
+      if @pay_frequency.nil?
+        invalid_properties.push('invalid value for "pay_frequency", pay_frequency cannot be nil.')
+      end
+
+      if @employment_type.nil?
+        invalid_properties.push('invalid value for "employment_type", employment_type cannot be nil.')
+      end
+
+      if @effective_date.nil?
+        invalid_properties.push('invalid value for "effective_date", effective_date cannot be nil.')
+      end
+
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      pay_frequency_validator = EnumAttributeValidator.new('String', ["weekly", "biweekly", "semimonthly", "monthly", "other", "null"])
+      return false if @pay_rate.nil?
+      return false if @pay_period.nil?
+      return false if @pay_frequency.nil?
+      pay_frequency_validator = EnumAttributeValidator.new('String', ["weekly", "biweekly", "semimonthly", "monthly", "other"])
       return false unless pay_frequency_validator.valid?(@pay_frequency)
-      employment_type_validator = EnumAttributeValidator.new('String', ["full_time", "part_time", "contractor", "other", "null"])
+      return false if @employment_type.nil?
+      employment_type_validator = EnumAttributeValidator.new('String', ["full_time", "part_time", "contractor", "other"])
       return false unless employment_type_validator.valid?(@employment_type)
+      return false if @effective_date.nil?
       true
     end
 
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] pay_frequency Object to be assigned
     def pay_frequency=(pay_frequency)
-      validator = EnumAttributeValidator.new('String', ["weekly", "biweekly", "semimonthly", "monthly", "other", "null"])
+      validator = EnumAttributeValidator.new('String', ["weekly", "biweekly", "semimonthly", "monthly", "other"])
       unless validator.valid?(pay_frequency)
         fail ArgumentError, "invalid value for \"pay_frequency\", must be one of #{validator.allowable_values}."
       end
@@ -169,7 +180,7 @@ module OpenapiClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] employment_type Object to be assigned
     def employment_type=(employment_type)
-      validator = EnumAttributeValidator.new('String', ["full_time", "part_time", "contractor", "other", "null"])
+      validator = EnumAttributeValidator.new('String', ["full_time", "part_time", "contractor", "other"])
       unless validator.valid?(employment_type)
         fail ArgumentError, "invalid value for \"employment_type\", must be one of #{validator.allowable_values}."
       end
@@ -181,7 +192,6 @@ module OpenapiClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          job_title == o.job_title &&
           pay_rate == o.pay_rate &&
           pay_period == o.pay_period &&
           pay_frequency == o.pay_frequency &&
@@ -199,7 +209,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [job_title, pay_rate, pay_period, pay_frequency, employment_type, currency, effective_date].hash
+      [pay_rate, pay_period, pay_frequency, employment_type, currency, effective_date].hash
     end
 
     # Builds the object from hash

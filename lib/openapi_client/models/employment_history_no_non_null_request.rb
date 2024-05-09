@@ -14,53 +14,25 @@ require 'date'
 require 'time'
 
 module OpenapiClient
-  class EmploymentNoNullEnumRequest
+  class EmploymentHistoryNoNonNullRequest
     attr_accessor :job_title
-
-    attr_accessor :pay_rate
-
-    attr_accessor :pay_period
-
-    attr_accessor :pay_frequency
-
-    attr_accessor :employment_type
-
-    attr_accessor :currency
 
     attr_accessor :effective_date
 
-    class EnumAttributeValidator
-      attr_reader :datatype
-      attr_reader :allowable_values
+    attr_accessor :group_id
 
-      def initialize(datatype, allowable_values)
-        @allowable_values = allowable_values.map do |value|
-          case datatype.to_s
-          when /Integer/i
-            value.to_i
-          when /Float/i
-            value.to_f
-          else
-            value
-          end
-        end
-      end
+    attr_accessor :group_remote_id
 
-      def valid?(value)
-        !value || allowable_values.include?(value)
-      end
-    end
+    attr_accessor :group_name
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'job_title' => :'job_title',
-        :'pay_rate' => :'pay_rate',
-        :'pay_period' => :'pay_period',
-        :'pay_frequency' => :'pay_frequency',
-        :'employment_type' => :'employment_type',
-        :'currency' => :'currency',
-        :'effective_date' => :'effective_date'
+        :'effective_date' => :'effective_date',
+        :'group_id' => :'group_id',
+        :'group_remote_id' => :'group_remote_id',
+        :'group_name' => :'group_name'
       }
     end
 
@@ -73,25 +45,19 @@ module OpenapiClient
     def self.openapi_types
       {
         :'job_title' => :'String',
-        :'pay_rate' => :'Float',
-        :'pay_period' => :'String',
-        :'pay_frequency' => :'String',
-        :'employment_type' => :'String',
-        :'currency' => :'CurrencyNotNullRequest',
-        :'effective_date' => :'Date'
+        :'effective_date' => :'Date',
+        :'group_id' => :'String',
+        :'group_remote_id' => :'String',
+        :'group_name' => :'String'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'job_title',
-        :'pay_rate',
-        :'pay_period',
-        :'pay_frequency',
-        :'employment_type',
-        :'currency',
-        :'effective_date'
+        :'group_id',
+        :'group_remote_id',
+        :'group_name'
       ])
     end
 
@@ -99,13 +65,13 @@ module OpenapiClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `OpenapiClient::EmploymentNoNullEnumRequest` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `OpenapiClient::EmploymentHistoryNoNonNullRequest` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `OpenapiClient::EmploymentNoNullEnumRequest`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `OpenapiClient::EmploymentHistoryNoNonNullRequest`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
@@ -114,28 +80,20 @@ module OpenapiClient
         self.job_title = attributes[:'job_title']
       end
 
-      if attributes.key?(:'pay_rate')
-        self.pay_rate = attributes[:'pay_rate']
-      end
-
-      if attributes.key?(:'pay_period')
-        self.pay_period = attributes[:'pay_period']
-      end
-
-      if attributes.key?(:'pay_frequency')
-        self.pay_frequency = attributes[:'pay_frequency']
-      end
-
-      if attributes.key?(:'employment_type')
-        self.employment_type = attributes[:'employment_type']
-      end
-
-      if attributes.key?(:'currency')
-        self.currency = attributes[:'currency']
-      end
-
       if attributes.key?(:'effective_date')
         self.effective_date = attributes[:'effective_date']
+      end
+
+      if attributes.key?(:'group_id')
+        self.group_id = attributes[:'group_id']
+      end
+
+      if attributes.key?(:'group_remote_id')
+        self.group_remote_id = attributes[:'group_remote_id']
+      end
+
+      if attributes.key?(:'group_name')
+        self.group_name = attributes[:'group_name']
       end
     end
 
@@ -143,37 +101,23 @@ module OpenapiClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
+      if @job_title.nil?
+        invalid_properties.push('invalid value for "job_title", job_title cannot be nil.')
+      end
+
+      if @effective_date.nil?
+        invalid_properties.push('invalid value for "effective_date", effective_date cannot be nil.')
+      end
+
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      pay_frequency_validator = EnumAttributeValidator.new('String', ["weekly", "biweekly", "semimonthly", "monthly", "other"])
-      return false unless pay_frequency_validator.valid?(@pay_frequency)
-      employment_type_validator = EnumAttributeValidator.new('String', ["full_time", "part_time", "contractor", "other"])
-      return false unless employment_type_validator.valid?(@employment_type)
+      return false if @job_title.nil?
+      return false if @effective_date.nil?
       true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] pay_frequency Object to be assigned
-    def pay_frequency=(pay_frequency)
-      validator = EnumAttributeValidator.new('String', ["weekly", "biweekly", "semimonthly", "monthly", "other"])
-      unless validator.valid?(pay_frequency)
-        fail ArgumentError, "invalid value for \"pay_frequency\", must be one of #{validator.allowable_values}."
-      end
-      @pay_frequency = pay_frequency
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] employment_type Object to be assigned
-    def employment_type=(employment_type)
-      validator = EnumAttributeValidator.new('String', ["full_time", "part_time", "contractor", "other"])
-      unless validator.valid?(employment_type)
-        fail ArgumentError, "invalid value for \"employment_type\", must be one of #{validator.allowable_values}."
-      end
-      @employment_type = employment_type
     end
 
     # Checks equality by comparing each attribute.
@@ -182,12 +126,10 @@ module OpenapiClient
       return true if self.equal?(o)
       self.class == o.class &&
           job_title == o.job_title &&
-          pay_rate == o.pay_rate &&
-          pay_period == o.pay_period &&
-          pay_frequency == o.pay_frequency &&
-          employment_type == o.employment_type &&
-          currency == o.currency &&
-          effective_date == o.effective_date
+          effective_date == o.effective_date &&
+          group_id == o.group_id &&
+          group_remote_id == o.group_remote_id &&
+          group_name == o.group_name
     end
 
     # @see the `==` method
@@ -199,7 +141,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [job_title, pay_rate, pay_period, pay_frequency, employment_type, currency, effective_date].hash
+      [job_title, effective_date, group_id, group_remote_id, group_name].hash
     end
 
     # Builds the object from hash

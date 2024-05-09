@@ -1,15 +1,14 @@
-# OpenapiClient::EmploymentNoNullEnumRequest
+# OpenapiClient::CompensationHistoryResponse
 
 ## Properties
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **job_title** | **String** |  |  |
 | **pay_rate** | **Float** |  |  |
 | **pay_period** | **String** |  |  |
 | **pay_frequency** | **String** |  |  |
 | **employment_type** | **String** |  |  |
-| **currency** | [**CurrencyNotNullRequest**](CurrencyNotNullRequest.md) |  |  |
+| **currency** | [**CurrencyResponse**](CurrencyResponse.md) |  |  |
 | **effective_date** | **Date** |  |  |
 
 ## Example
@@ -17,8 +16,7 @@
 ```ruby
 require 'openapi_client'
 
-instance = OpenapiClient::EmploymentNoNullEnumRequest.new(
-  job_title: Software Developer,
+instance = OpenapiClient::CompensationHistoryResponse.new(
   pay_rate: 85000,
   pay_period: year,
   pay_frequency: semimonthly,
