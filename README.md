@@ -331,7 +331,7 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::CreateEmployeeRequestDependents](docs/CreateEmployeeRequestDependents.md)
  - [OpenapiClient::CreateEmployeeRequestEmergencyContacts](docs/CreateEmployeeRequestEmergencyContacts.md)
  - [OpenapiClient::CreateEmployeeRequestManager](docs/CreateEmployeeRequestManager.md)
- - [OpenapiClient::CurrencyRequest](docs/CurrencyRequest.md)
+ - [OpenapiClient::CurrencyNotNullRequest](docs/CurrencyNotNullRequest.md)
  - [OpenapiClient::CurrencyResponse](docs/CurrencyResponse.md)
  - [OpenapiClient::DisconnectResponse](docs/DisconnectResponse.md)
  - [OpenapiClient::EmployeeResponse](docs/EmployeeResponse.md)

@@ -73,7 +73,7 @@ module OpenapiClient
         :'pay_period' => :'String',
         :'pay_frequency' => :'String',
         :'employment_type' => :'String',
-        :'currency' => :'CurrencyRequest',
+        :'currency' => :'CurrencyNotNullRequest',
         :'effective_date' => :'Date'
       }
     end

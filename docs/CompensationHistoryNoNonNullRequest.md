@@ -8,7 +8,7 @@
 | **pay_period** | **String** |  |  |
 | **pay_frequency** | **String** |  |  |
 | **employment_type** | **String** |  |  |
-| **currency** | [**CurrencyRequest**](CurrencyRequest.md) |  |  |
+| **currency** | [**CurrencyNotNullRequest**](CurrencyNotNullRequest.md) |  |  |
 | **effective_date** | **Date** |  |  |
 
 ## Example
