@@ -140,7 +140,7 @@ module OpenapiClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      pay_frequency_validator = EnumAttributeValidator.new('String', ["weekly", "biweekly", "semimonthly", "monthly", "other", "null"])
+      pay_frequency_validator = EnumAttributeValidator.new('String', ["year", "weekly", "biweekly", "semimonthly", "monthly", "other", "null"])
       return false unless pay_frequency_validator.valid?(@pay_frequency)
       employment_type_validator = EnumAttributeValidator.new('String', ["full_time", "part_time", "contractor", "other", "null"])
       return false unless employment_type_validator.valid?(@employment_type)
@@ -150,7 +150,7 @@ module OpenapiClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] pay_frequency Object to be assigned
     def pay_frequency=(pay_frequency)
-      validator = EnumAttributeValidator.new('String', ["weekly", "biweekly", "semimonthly", "monthly", "other", "null"])
+      validator = EnumAttributeValidator.new('String', ["year", "weekly", "biweekly", "semimonthly", "monthly", "other", "null"])
       unless validator.valid?(pay_frequency)
         fail ArgumentError, "invalid value for \"pay_frequency\", must be one of #{validator.allowable_values}."
       end

@@ -40,7 +40,7 @@ describe OpenapiClient::CompensationHistoryResponse do
   describe 'test attribute "pay_frequency"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["weekly", "biweekly", "semimonthly", "monthly", "other", "null"])
+      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["year", "weekly", "biweekly", "semimonthly", "monthly", "other", "null"])
       # validator.allowable_values.each do |value|
       #   expect { instance.pay_frequency = value }.not_to raise_error
       # end
