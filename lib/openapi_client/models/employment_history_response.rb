@@ -25,6 +25,10 @@ module OpenapiClient
 
     attr_accessor :group_name
 
+    attr_accessor :manager_id
+
+    attr_accessor :manager_remote_id
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -32,7 +36,9 @@ module OpenapiClient
         :'effective_date' => :'effective_date',
         :'group_id' => :'group_id',
         :'group_remote_id' => :'group_remote_id',
-        :'group_name' => :'group_name'
+        :'group_name' => :'group_name',
+        :'manager_id' => :'manager_id',
+        :'manager_remote_id' => :'manager_remote_id'
       }
     end
 
@@ -48,7 +54,9 @@ module OpenapiClient
         :'effective_date' => :'Date',
         :'group_id' => :'String',
         :'group_remote_id' => :'String',
-        :'group_name' => :'String'
+        :'group_name' => :'String',
+        :'manager_id' => :'String',
+        :'manager_remote_id' => :'String'
       }
     end
 
@@ -59,7 +67,9 @@ module OpenapiClient
         :'effective_date',
         :'group_id',
         :'group_remote_id',
-        :'group_name'
+        :'group_name',
+        :'manager_id',
+        :'manager_remote_id'
       ])
     end
 
@@ -97,6 +107,14 @@ module OpenapiClient
       if attributes.key?(:'group_name')
         self.group_name = attributes[:'group_name']
       end
+
+      if attributes.key?(:'manager_id')
+        self.manager_id = attributes[:'manager_id']
+      end
+
+      if attributes.key?(:'manager_remote_id')
+        self.manager_remote_id = attributes[:'manager_remote_id']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -121,7 +139,9 @@ module OpenapiClient
           effective_date == o.effective_date &&
           group_id == o.group_id &&
           group_remote_id == o.group_remote_id &&
-          group_name == o.group_name
+          group_name == o.group_name &&
+          manager_id == o.manager_id &&
+          manager_remote_id == o.manager_remote_id
     end
 
     # @see the `==` method
@@ -133,7 +153,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [job_title, effective_date, group_id, group_remote_id, group_name].hash
+      [job_title, effective_date, group_id, group_remote_id, group_name, manager_id, manager_remote_id].hash
     end
 
     # Builds the object from hash

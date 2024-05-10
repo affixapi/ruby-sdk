@@ -9,6 +9,8 @@
 | **group_id** | **String** |  |  |
 | **group_remote_id** | **String** |  |  |
 | **group_name** | **String** |  |  |
+| **manager_id** | **String** |  |  |
+| **manager_remote_id** | **String** |  |  |
 
 ## Example
 
@@ -20,7 +22,9 @@ instance = OpenapiClient::EmploymentHistoryNoNonNullRequest.new(
   effective_date: Sun Oct 11 00:00:00 UTC 2020,
   group_id: 4B9bKBpX5tnwjiG93TAqF7ci,
   group_remote_id: 49,
-  group_name: Engineering
+  group_name: Engineering,
+  manager_id: null,
+  manager_remote_id: null
 )
 ```
 

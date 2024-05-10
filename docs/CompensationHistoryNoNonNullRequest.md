@@ -10,6 +10,7 @@
 | **employment_type** | **String** |  |  |
 | **currency** | [**CurrencyNotNullRequest**](CurrencyNotNullRequest.md) |  |  |
 | **effective_date** | **Date** |  |  |
+| **notes** | **String** |  |  |
 
 ## Example
 
@@ -22,7 +23,8 @@ instance = OpenapiClient::CompensationHistoryNoNonNullRequest.new(
   pay_frequency: semimonthly,
   employment_type: full_time,
   currency: null,
-  effective_date: Sun Oct 11 00:00:00 UTC 2020
+  effective_date: Sun Oct 11 00:00:00 UTC 2020,
+  notes: Salary Adjustment
 )
 ```
 

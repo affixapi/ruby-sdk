@@ -27,6 +27,8 @@ module OpenapiClient
 
     attr_accessor :effective_date
 
+    attr_accessor :notes
+
     class EnumAttributeValidator
       attr_reader :datatype
       attr_reader :allowable_values
@@ -57,7 +59,8 @@ module OpenapiClient
         :'pay_frequency' => :'pay_frequency',
         :'employment_type' => :'employment_type',
         :'currency' => :'currency',
-        :'effective_date' => :'effective_date'
+        :'effective_date' => :'effective_date',
+        :'notes' => :'notes'
       }
     end
 
@@ -74,7 +77,8 @@ module OpenapiClient
         :'pay_frequency' => :'String',
         :'employment_type' => :'String',
         :'currency' => :'CurrencyNotNullRequest',
-        :'effective_date' => :'Date'
+        :'effective_date' => :'Date',
+        :'notes' => :'String'
       }
     end
 
@@ -123,6 +127,10 @@ module OpenapiClient
       if attributes.key?(:'effective_date')
         self.effective_date = attributes[:'effective_date']
       end
+
+      if attributes.key?(:'notes')
+        self.notes = attributes[:'notes']
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -149,6 +157,10 @@ module OpenapiClient
         invalid_properties.push('invalid value for "effective_date", effective_date cannot be nil.')
       end
 
+      if @notes.nil?
+        invalid_properties.push('invalid value for "notes", notes cannot be nil.')
+      end
+
       invalid_properties
     end
 
@@ -164,6 +176,7 @@ module OpenapiClient
       employment_type_validator = EnumAttributeValidator.new('String', ["full_time", "part_time", "contractor", "other"])
       return false unless employment_type_validator.valid?(@employment_type)
       return false if @effective_date.nil?
+      return false if @notes.nil?
       true
     end
 
@@ -197,7 +210,8 @@ module OpenapiClient
           pay_frequency == o.pay_frequency &&
           employment_type == o.employment_type &&
           currency == o.currency &&
-          effective_date == o.effective_date
+          effective_date == o.effective_date &&
+          notes == o.notes
     end
 
     # @see the `==` method
@@ -209,7 +223,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [pay_rate, pay_period, pay_frequency, employment_type, currency, effective_date].hash
+      [pay_rate, pay_period, pay_frequency, employment_type, currency, effective_date, notes].hash
     end
 
     # Builds the object from hash
