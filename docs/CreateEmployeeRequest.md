@@ -16,7 +16,7 @@
 | **tax_id** | **String** |  | [optional] |
 | **gender** | **String** |  | [optional] |
 | **ethnicity** | **String** |  | [optional] |
-| **marital_status** | **String** |  | [optional] |
+| **marital_status** | **String** | &#x60;other&#x60; option can include co-habitating, civil partnership, separated, widowed, etc  | [optional] |
 | **date_of_birth** | **Date** |  | [optional] |
 | **employment_status** | [**EmploymentStatusNotNullRequest**](EmploymentStatusNotNullRequest.md) |  | [optional] |
 | **employment_type** | **String** |  | [optional] |

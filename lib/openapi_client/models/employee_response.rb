@@ -50,7 +50,7 @@ module OpenapiClient
 
     attr_accessor :ethnicity
 
-    # `other` option can include co-habitating, civil partnership, separated, divorced, widowed, etc 
+    # `other` option can include co-habitating, civil partnership, separated, widowed, etc 
     attr_accessor :marital_status
 
     attr_accessor :date_of_birth
@@ -412,7 +412,7 @@ module OpenapiClient
       return false unless gender_validator.valid?(@gender)
       ethnicity_validator = EnumAttributeValidator.new('String', ["null", "asian", "black", "hispanic", "mixed", "not_specified", "other", "white"])
       return false unless ethnicity_validator.valid?(@ethnicity)
-      marital_status_validator = EnumAttributeValidator.new('String', ["single", "married", "not_specified", "other", "null"])
+      marital_status_validator = EnumAttributeValidator.new('String', ["single", "married", "divorced", "not_specified", "other", "null"])
       return false unless marital_status_validator.valid?(@marital_status)
       employment_type_validator = EnumAttributeValidator.new('String', ["null", "full_time", "part_time", "contractor", "other"])
       return false unless employment_type_validator.valid?(@employment_type)
@@ -442,7 +442,7 @@ module OpenapiClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] marital_status Object to be assigned
     def marital_status=(marital_status)
-      validator = EnumAttributeValidator.new('String', ["single", "married", "not_specified", "other", "null"])
+      validator = EnumAttributeValidator.new('String', ["single", "married", "divorced", "not_specified", "other", "null"])
       unless validator.valid?(marital_status)
         fail ArgumentError, "invalid value for \"marital_status\", must be one of #{validator.allowable_values}."
       end
