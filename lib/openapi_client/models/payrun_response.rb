@@ -90,6 +90,7 @@ module OpenapiClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'run_state',
         :'run_type',
         :'start_date',
         :'end_date',
@@ -153,10 +154,6 @@ module OpenapiClient
         invalid_properties.push('invalid value for "remote_id", remote_id cannot be nil.')
       end
 
-      if @run_state.nil?
-        invalid_properties.push('invalid value for "run_state", run_state cannot be nil.')
-      end
-
       invalid_properties
     end
 
@@ -165,10 +162,9 @@ module OpenapiClient
     def valid?
       return false if @id.nil?
       return false if @remote_id.nil?
-      return false if @run_state.nil?
-      run_state_validator = EnumAttributeValidator.new('String', ["paid", "pending"])
+      run_state_validator = EnumAttributeValidator.new('String', ["paid", "pending", "null"])
       return false unless run_state_validator.valid?(@run_state)
-      run_type_validator = EnumAttributeValidator.new('String', ["regular", "null"])
+      run_type_validator = EnumAttributeValidator.new('String', ["regular", "one-time", "off-cycle", "correction", "reversal", "null"])
       return false unless run_type_validator.valid?(@run_type)
       true
     end
@@ -176,7 +172,7 @@ module OpenapiClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] run_state Object to be assigned
     def run_state=(run_state)
-      validator = EnumAttributeValidator.new('String', ["paid", "pending"])
+      validator = EnumAttributeValidator.new('String', ["paid", "pending", "null"])
       unless validator.valid?(run_state)
         fail ArgumentError, "invalid value for \"run_state\", must be one of #{validator.allowable_values}."
       end
@@ -186,7 +182,7 @@ module OpenapiClient
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] run_type Object to be assigned
     def run_type=(run_type)
-      validator = EnumAttributeValidator.new('String', ["regular", "null"])
+      validator = EnumAttributeValidator.new('String', ["regular", "one-time", "off-cycle", "correction", "reversal", "null"])
       unless validator.valid?(run_type)
         fail ArgumentError, "invalid value for \"run_type\", must be one of #{validator.allowable_values}."
       end
