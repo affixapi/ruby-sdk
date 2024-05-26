@@ -118,7 +118,12 @@ module OpenapiClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'gross_pay',
+        :'net_pay',
+        :'earnings',
         :'contributions',
+        :'deductions',
+        :'taxes'
       ])
     end
 
@@ -226,14 +231,6 @@ module OpenapiClient
         invalid_properties.push('invalid value for "currency", currency cannot be nil.')
       end
 
-      if @gross_pay.nil?
-        invalid_properties.push('invalid value for "gross_pay", gross_pay cannot be nil.')
-      end
-
-      if @net_pay.nil?
-        invalid_properties.push('invalid value for "net_pay", net_pay cannot be nil.')
-      end
-
       if @start_date.nil?
         invalid_properties.push('invalid value for "start_date", start_date cannot be nil.')
       end
@@ -244,18 +241,6 @@ module OpenapiClient
 
       if @payment_date.nil?
         invalid_properties.push('invalid value for "payment_date", payment_date cannot be nil.')
-      end
-
-      if @earnings.nil?
-        invalid_properties.push('invalid value for "earnings", earnings cannot be nil.')
-      end
-
-      if @deductions.nil?
-        invalid_properties.push('invalid value for "deductions", deductions cannot be nil.')
-      end
-
-      if @taxes.nil?
-        invalid_properties.push('invalid value for "taxes", taxes cannot be nil.')
       end
 
       invalid_properties
@@ -271,14 +256,9 @@ module OpenapiClient
       return false if @currency.nil?
       currency_validator = EnumAttributeValidator.new('String', ["usd", "eur", "gbp"])
       return false unless currency_validator.valid?(@currency)
-      return false if @gross_pay.nil?
-      return false if @net_pay.nil?
       return false if @start_date.nil?
       return false if @end_date.nil?
       return false if @payment_date.nil?
-      return false if @earnings.nil?
-      return false if @deductions.nil?
-      return false if @taxes.nil?
       true
     end
 
