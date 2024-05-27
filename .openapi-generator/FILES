@@ -21,6 +21,7 @@ docs/CreateEmployeeRequestDependents.md
 docs/CreateEmployeeRequestEmergencyContacts.md
 docs/CreateEmployeeRequestManager.md
 docs/CurrencyNotNullRequest.md
+docs/CurrencyNotNullResponse.md
 docs/CurrencyResponse.md
 docs/DisconnectResponse.md
 docs/EmployeeResponse.md
@@ -45,6 +46,7 @@ docs/MessageResponse.md
 docs/ModeRequest.md
 docs/ModeResponse.md
 docs/PayrunResponse.md
+docs/PayrunTypeResponse.md
 docs/PayslipResponse.md
 docs/PayslipResponseContributions.md
 docs/PayslipResponseDeductions.md
@@ -83,6 +85,7 @@ lib/openapi_client/models/create_employee_request_dependents.rb
 lib/openapi_client/models/create_employee_request_emergency_contacts.rb
 lib/openapi_client/models/create_employee_request_manager.rb
 lib/openapi_client/models/currency_not_null_request.rb
+lib/openapi_client/models/currency_not_null_response.rb
 lib/openapi_client/models/currency_response.rb
 lib/openapi_client/models/disconnect_response.rb
 lib/openapi_client/models/employee_response.rb
@@ -106,6 +109,7 @@ lib/openapi_client/models/message_response.rb
 lib/openapi_client/models/mode_request.rb
 lib/openapi_client/models/mode_response.rb
 lib/openapi_client/models/payrun_response.rb
+lib/openapi_client/models/payrun_type_response.rb
 lib/openapi_client/models/payslip_response.rb
 lib/openapi_client/models/payslip_response_contributions.rb
 lib/openapi_client/models/payslip_response_deductions.rb
@@ -142,6 +146,7 @@ spec/models/create_employee_request_emergency_contacts_spec.rb
 spec/models/create_employee_request_manager_spec.rb
 spec/models/create_employee_request_spec.rb
 spec/models/currency_not_null_request_spec.rb
+spec/models/currency_not_null_response_spec.rb
 spec/models/currency_response_spec.rb
 spec/models/disconnect_response_spec.rb
 spec/models/employee_response_manager_spec.rb
@@ -165,6 +170,7 @@ spec/models/message_response_spec.rb
 spec/models/mode_request_spec.rb
 spec/models/mode_response_spec.rb
 spec/models/payrun_response_spec.rb
+spec/models/payrun_type_response_spec.rb
 spec/models/payslip_response_contributions_spec.rb
 spec/models/payslip_response_deductions_spec.rb
 spec/models/payslip_response_earnings_spec.rb

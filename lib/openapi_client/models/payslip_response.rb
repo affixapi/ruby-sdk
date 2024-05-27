@@ -23,7 +23,13 @@ module OpenapiClient
 
     attr_accessor :employee_id
 
+    attr_accessor :employee_remote_id
+
     attr_accessor :payrun_id
+
+    attr_accessor :payrun_remote_id
+
+    attr_accessor :payrun_type
 
     attr_accessor :currency
 
@@ -48,35 +54,16 @@ module OpenapiClient
 
     attr_accessor :taxes
 
-    class EnumAttributeValidator
-      attr_reader :datatype
-      attr_reader :allowable_values
-
-      def initialize(datatype, allowable_values)
-        @allowable_values = allowable_values.map do |value|
-          case datatype.to_s
-          when /Integer/i
-            value.to_i
-          when /Float/i
-            value.to_f
-          else
-            value
-          end
-        end
-      end
-
-      def valid?(value)
-        !value || allowable_values.include?(value)
-      end
-    end
-
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'id' => :'id',
         :'remote_id' => :'remote_id',
         :'employee_id' => :'employee_id',
+        :'employee_remote_id' => :'employee_remote_id',
         :'payrun_id' => :'payrun_id',
+        :'payrun_remote_id' => :'payrun_remote_id',
+        :'payrun_type' => :'payrun_type',
         :'currency' => :'currency',
         :'gross_pay' => :'gross_pay',
         :'net_pay' => :'net_pay',
@@ -101,8 +88,11 @@ module OpenapiClient
         :'id' => :'String',
         :'remote_id' => :'String',
         :'employee_id' => :'String',
+        :'employee_remote_id' => :'String',
         :'payrun_id' => :'String',
-        :'currency' => :'String',
+        :'payrun_remote_id' => :'String',
+        :'payrun_type' => :'PayrunTypeResponse',
+        :'currency' => :'CurrencyNotNullResponse',
         :'gross_pay' => :'Float',
         :'net_pay' => :'Float',
         :'start_date' => :'Date',
@@ -118,6 +108,10 @@ module OpenapiClient
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'id',
+        :'remote_id',
+        :'payrun_type',
+        :'currency',
         :'gross_pay',
         :'net_pay',
         :'earnings',
@@ -154,8 +148,20 @@ module OpenapiClient
         self.employee_id = attributes[:'employee_id']
       end
 
+      if attributes.key?(:'employee_remote_id')
+        self.employee_remote_id = attributes[:'employee_remote_id']
+      end
+
       if attributes.key?(:'payrun_id')
         self.payrun_id = attributes[:'payrun_id']
+      end
+
+      if attributes.key?(:'payrun_remote_id')
+        self.payrun_remote_id = attributes[:'payrun_remote_id']
+      end
+
+      if attributes.key?(:'payrun_type')
+        self.payrun_type = attributes[:'payrun_type']
       end
 
       if attributes.key?(:'currency')
@@ -211,24 +217,20 @@ module OpenapiClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @id.nil?
-        invalid_properties.push('invalid value for "id", id cannot be nil.')
-      end
-
-      if @remote_id.nil?
-        invalid_properties.push('invalid value for "remote_id", remote_id cannot be nil.')
-      end
-
       if @employee_id.nil?
         invalid_properties.push('invalid value for "employee_id", employee_id cannot be nil.')
+      end
+
+      if @employee_remote_id.nil?
+        invalid_properties.push('invalid value for "employee_remote_id", employee_remote_id cannot be nil.')
       end
 
       if @payrun_id.nil?
         invalid_properties.push('invalid value for "payrun_id", payrun_id cannot be nil.')
       end
 
-      if @currency.nil?
-        invalid_properties.push('invalid value for "currency", currency cannot be nil.')
+      if @payrun_remote_id.nil?
+        invalid_properties.push('invalid value for "payrun_remote_id", payrun_remote_id cannot be nil.')
       end
 
       if @start_date.nil?
@@ -249,27 +251,14 @@ module OpenapiClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @id.nil?
-      return false if @remote_id.nil?
       return false if @employee_id.nil?
+      return false if @employee_remote_id.nil?
       return false if @payrun_id.nil?
-      return false if @currency.nil?
-      currency_validator = EnumAttributeValidator.new('String', ["usd", "eur", "gbp"])
-      return false unless currency_validator.valid?(@currency)
+      return false if @payrun_remote_id.nil?
       return false if @start_date.nil?
       return false if @end_date.nil?
       return false if @payment_date.nil?
       true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] currency Object to be assigned
-    def currency=(currency)
-      validator = EnumAttributeValidator.new('String', ["usd", "eur", "gbp"])
-      unless validator.valid?(currency)
-        fail ArgumentError, "invalid value for \"currency\", must be one of #{validator.allowable_values}."
-      end
-      @currency = currency
     end
 
     # Checks equality by comparing each attribute.
@@ -280,7 +269,10 @@ module OpenapiClient
           id == o.id &&
           remote_id == o.remote_id &&
           employee_id == o.employee_id &&
+          employee_remote_id == o.employee_remote_id &&
           payrun_id == o.payrun_id &&
+          payrun_remote_id == o.payrun_remote_id &&
+          payrun_type == o.payrun_type &&
           currency == o.currency &&
           gross_pay == o.gross_pay &&
           net_pay == o.net_pay &&
@@ -302,7 +294,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, remote_id, employee_id, payrun_id, currency, gross_pay, net_pay, start_date, end_date, payment_date, earnings, contributions, deductions, taxes].hash
+      [id, remote_id, employee_id, employee_remote_id, payrun_id, payrun_remote_id, payrun_type, currency, gross_pay, net_pay, start_date, end_date, payment_date, earnings, contributions, deductions, taxes].hash
     end
 
     # Builds the object from hash

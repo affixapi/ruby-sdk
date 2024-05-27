@@ -7,8 +7,11 @@
 | **id** | **String** | The Affix-assigned id of the payslip |  |
 | **remote_id** | **String** | the remote system-assigned id of the payrun |  |
 | **employee_id** | **String** |  |  |
+| **employee_remote_id** | **String** |  |  |
 | **payrun_id** | **String** |  |  |
-| **currency** | **String** |  |  |
+| **payrun_remote_id** | **String** |  |  |
+| **payrun_type** | [**PayrunTypeResponse**](PayrunTypeResponse.md) |  |  |
+| **currency** | [**CurrencyNotNullResponse**](CurrencyNotNullResponse.md) |  |  |
 | **gross_pay** | **Float** | if USD/EUR/GBP, in cent |  |
 | **net_pay** | **Float** | if USD/EUR/GBP, in cent |  |
 | **start_date** | **Date** |  |  |
@@ -28,8 +31,11 @@ instance = OpenapiClient::PayslipResponse.new(
   id: cD0yMDIxLTAxLTA2KzAzJTNBMjQlM0E1My40MzQzMjYlMkIwMCUzQTAw,
   remote_id: 19202938,
   employee_id: d2f972d0-2526-434b-9409-4c3b468e08f0,
+  employee_remote_id: 19202938,
   payrun_id: 35347df1-95e7-46e2-93cc-66f1191edca5,
-  currency: eur,
+  payrun_remote_id: 19202938,
+  payrun_type: null,
+  currency: null,
   gross_pay: 134267,
   net_pay: 86578,
   start_date: Wed Jan 01 00:00:00 UTC 2020,

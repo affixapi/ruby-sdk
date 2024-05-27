@@ -37,23 +37,19 @@ describe OpenapiClient::PayrunResponse do
     end
   end
 
-  describe 'test attribute "run_state"' do
+  describe 'test attribute "state"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
       # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["paid", "pending", "null"])
       # validator.allowable_values.each do |value|
-      #   expect { instance.run_state = value }.not_to raise_error
+      #   expect { instance.state = value }.not_to raise_error
       # end
     end
   end
 
-  describe 'test attribute "run_type"' do
+  describe 'test attribute "type"' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-      # validator = Petstore::EnumTest::EnumAttributeValidator.new('String', ["regular", "one-time", "off-cycle", "correction", "reversal", "null"])
-      # validator.allowable_values.each do |value|
-      #   expect { instance.run_type = value }.not_to raise_error
-      # end
     end
   end
 
