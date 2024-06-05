@@ -16,8 +16,8 @@ require 'time'
 module OpenapiClient
   class PayrunTypeResponse
     REGULAR = "regular".freeze
-    ONE_TIME = "one-time".freeze
-    OFF_CYCLE = "off-cycle".freeze
+    ONE_TIME = "one_time".freeze
+    OFF_CYCLE = "off_cycle".freeze
     CORRECTION = "correction".freeze
     REVERSAL = "reversal".freeze
     NULL = "null".freeze
