@@ -251,7 +251,7 @@ module OpenapiClient
     end
 
     # Payruns
-    # List all the pay runs that occurred during the respective period.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
+    # List all the pay runs that occurred during the respective period.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   # - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
     # @param start_date [Date] The start date of the search period
     # @param end_date [Date] The end date of the search period
     # @param [Hash] opts the optional parameters
@@ -262,7 +262,7 @@ module OpenapiClient
     end
 
     # Payruns
-    # List all the pay runs that occurred during the respective period.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
+    # List all the pay runs that occurred during the respective period.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   # - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
     # @param start_date [Date] The start date of the search period
     # @param end_date [Date] The end date of the search period
     # @param [Hash] opts the optional parameters
@@ -322,7 +322,7 @@ module OpenapiClient
     end
 
     # Payslips
-    # Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
+    # Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   # - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
     # @param payrun_id [String] The id of the payrun.
     # @param [Hash] opts the optional parameters
     # @return [Array<PayslipResponse>]
@@ -332,7 +332,7 @@ module OpenapiClient
     end
 
     # Payslips
-    # Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
+    # Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   # - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
     # @param payrun_id [String] The id of the payrun.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<PayslipResponse>, Integer, Hash)>] Array<PayslipResponse> data, response status code and response headers

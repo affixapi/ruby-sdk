@@ -79,7 +79,7 @@ describe 'Class20230301Api' do
 
   # unit tests for xhr_payruns20230301
   # Payruns
-  # List all the pay runs that occurred during the respective period.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
+  # List all the pay runs that occurred during the respective period.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   # - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
   # @param start_date The start date of the search period
   # @param end_date The end date of the search period
   # @param [Hash] opts the optional parameters
@@ -92,7 +92,7 @@ describe 'Class20230301Api' do
 
   # unit tests for xhr_payslips20230301
   # Payslips
-  # Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
+  # Retrieves payslips from a specific payrun.  Supported integrations:   - brain payroll   - brightpay connect   - deel   - gusto   - justworks   - moorepay   - onpay   - oyster   - parolla.ie   - paycircle   - payfit   - pento.io   - quickbooks online   - remote.com   # - rippling   - sageone   - shape payroll   - simplepay.ie   - staffology   - xero uk 
   # @param payrun_id The id of the payrun.
   # @param [Hash] opts the optional parameters
   # @return [Array<PayslipResponse>]
