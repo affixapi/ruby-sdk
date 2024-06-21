@@ -50,7 +50,6 @@ module OpenapiClient
     PENTO_IO = "pento.io".freeze
     PEOPLEHR = "peoplehr".freeze
     REMOTE_COM = "remote.com".freeze
-    RIPPLING = "rippling".freeze
     SAGEONE = "sageone".freeze
     SHAPE_PAYROLL = "shape payroll".freeze
     SIMPLEPAY_IE = "simplepay.ie".freeze
