@@ -11,5 +11,5 @@ OpenAPI Generator version: 5.1.1
 =end
 
 module OpenapiClient
-  VERSION = '1.1.89'
+  VERSION = '1.1.90'
 end
