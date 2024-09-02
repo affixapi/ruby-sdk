@@ -54,6 +54,8 @@ module OpenapiClient
 
     attr_accessor :taxes
 
+    attr_accessor :reimbursements
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -73,7 +75,8 @@ module OpenapiClient
         :'earnings' => :'earnings',
         :'contributions' => :'contributions',
         :'deductions' => :'deductions',
-        :'taxes' => :'taxes'
+        :'taxes' => :'taxes',
+        :'reimbursements' => :'reimbursements'
       }
     end
 
@@ -101,7 +104,8 @@ module OpenapiClient
         :'earnings' => :'Array<PayslipResponseEarnings>',
         :'contributions' => :'Array<PayslipResponseContributions>',
         :'deductions' => :'Array<PayslipResponseDeductions>',
-        :'taxes' => :'Array<PayslipResponseTaxes>'
+        :'taxes' => :'Array<PayslipResponseTaxes>',
+        :'reimbursements' => :'Array<PayslipResponseReimbursements>'
       }
     end
 
@@ -117,7 +121,8 @@ module OpenapiClient
         :'earnings',
         :'contributions',
         :'deductions',
-        :'taxes'
+        :'taxes',
+        :'reimbursements'
       ])
     end
 
@@ -211,6 +216,12 @@ module OpenapiClient
           self.taxes = value
         end
       end
+
+      if attributes.key?(:'reimbursements')
+        if (value = attributes[:'reimbursements']).is_a?(Array)
+          self.reimbursements = value
+        end
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -282,7 +293,8 @@ module OpenapiClient
           earnings == o.earnings &&
           contributions == o.contributions &&
           deductions == o.deductions &&
-          taxes == o.taxes
+          taxes == o.taxes &&
+          reimbursements == o.reimbursements
     end
 
     # @see the `==` method
@@ -294,7 +306,7 @@ module OpenapiClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, remote_id, employee_id, employee_remote_id, payrun_id, payrun_remote_id, payrun_type, currency, gross_pay, net_pay, start_date, end_date, payment_date, earnings, contributions, deductions, taxes].hash
+      [id, remote_id, employee_id, employee_remote_id, payrun_id, payrun_remote_id, payrun_type, currency, gross_pay, net_pay, start_date, end_date, payment_date, earnings, contributions, deductions, taxes, reimbursements].hash
     end
 
     # Builds the object from hash

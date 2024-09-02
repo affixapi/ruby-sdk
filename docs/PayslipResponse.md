@@ -21,6 +21,7 @@
 | **contributions** | [**Array&lt;PayslipResponseContributions&gt;**](PayslipResponseContributions.md) | Items paid by the employer that are not included in gross pay, such as employer-paid portion of private health insurance  |  |
 | **deductions** | [**Array&lt;PayslipResponseDeductions&gt;**](PayslipResponseDeductions.md) |  |  |
 | **taxes** | [**Array&lt;PayslipResponseTaxes&gt;**](PayslipResponseTaxes.md) |  |  |
+| **reimbursements** | [**Array&lt;PayslipResponseReimbursements&gt;**](PayslipResponseReimbursements.md) |  |  |
 
 ## Example
 
@@ -44,7 +45,8 @@ instance = OpenapiClient::PayslipResponse.new(
   earnings: [{&quot;amount&quot;:100234,&quot;name&quot;:&quot;SALARY&quot;,&quot;hours&quot;:80},{&quot;amount&quot;:834234,&quot;name&quot;:&quot;OVERTIME&quot;,&quot;hours&quot;:8}],
   contributions: [{&quot;name&quot;:&quot;Private Health Insurance (Employer)&quot;,&quot;amount&quot;:13454},{&quot;name&quot;:&quot;Transportation allowance benefit (Employer)&quot;,&quot;amount&quot;:3454},{&quot;name&quot;:&quot;Other (Employer)&quot;,&quot;amount&quot;:3454}],
   deductions: [{&quot;name&quot;:&quot;Transportation allowance benefit&quot;,&quot;amount&quot;:3454},{&quot;name&quot;:&quot;Private Health Insurance (Employee)&quot;,&quot;amount&quot;:3454}],
-  taxes: [{&quot;name&quot;:&quot;PRSI&quot;,&quot;amount&quot;:725,&quot;employer_tax&quot;:false},{&quot;name&quot;:&quot;PSC (Class S)&quot;,&quot;amount&quot;:125,&quot;employer_tax&quot;:false},{&quot;name&quot;:&quot;Income Tax&quot;,&quot;amount&quot;:10025,&quot;employer_tax&quot;:false},{&quot;name&quot;:&quot;Payroll Tax&quot;,&quot;amount&quot;:10025,&quot;employer_tax&quot;:true}]
+  taxes: [{&quot;name&quot;:&quot;PRSI&quot;,&quot;amount&quot;:725,&quot;employer_tax&quot;:false},{&quot;name&quot;:&quot;PSC (Class S)&quot;,&quot;amount&quot;:125,&quot;employer_tax&quot;:false},{&quot;name&quot;:&quot;Income Tax&quot;,&quot;amount&quot;:10025,&quot;employer_tax&quot;:false},{&quot;name&quot;:&quot;Payroll Tax&quot;,&quot;amount&quot;:10025,&quot;employer_tax&quot;:true}],
+  reimbursements: [{&quot;name&quot;:&quot;Slack seat&quot;,&quot;amount&quot;:725}]
 )
 ```
 

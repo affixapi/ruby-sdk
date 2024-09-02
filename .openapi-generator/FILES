@@ -51,6 +51,7 @@ docs/PayslipResponse.md
 docs/PayslipResponseContributions.md
 docs/PayslipResponseDeductions.md
 docs/PayslipResponseEarnings.md
+docs/PayslipResponseReimbursements.md
 docs/PayslipResponseTaxes.md
 docs/PolicyTypeResponse.md
 docs/ProviderRequest.md
@@ -114,6 +115,7 @@ lib/openapi_client/models/payslip_response.rb
 lib/openapi_client/models/payslip_response_contributions.rb
 lib/openapi_client/models/payslip_response_deductions.rb
 lib/openapi_client/models/payslip_response_earnings.rb
+lib/openapi_client/models/payslip_response_reimbursements.rb
 lib/openapi_client/models/payslip_response_taxes.rb
 lib/openapi_client/models/policy_type_response.rb
 lib/openapi_client/models/provider_request.rb
@@ -174,6 +176,7 @@ spec/models/payrun_type_response_spec.rb
 spec/models/payslip_response_contributions_spec.rb
 spec/models/payslip_response_deductions_spec.rb
 spec/models/payslip_response_earnings_spec.rb
+spec/models/payslip_response_reimbursements_spec.rb
 spec/models/payslip_response_spec.rb
 spec/models/payslip_response_taxes_spec.rb
 spec/models/policy_type_response_spec.rb
