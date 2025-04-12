@@ -18,6 +18,8 @@ module OpenapiClient
     USD = "usd".freeze
     GBP = "gbp".freeze
     EUR = "eur".freeze
+    SEK = "sek".freeze
+    CAD = "cad".freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string
