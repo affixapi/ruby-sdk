@@ -50,11 +50,12 @@ module OpenapiClient
     PAYCIRCLE = "paycircle".freeze
     PENTO_IO = "pento.io".freeze
     PEOPLEHR = "peoplehr".freeze
+    QUICKBOOKS_ONLINE = "quickbooks online".freeze
     REMOTE_COM = "remote.com".freeze
     SAGEONE = "sageone".freeze
     SHAPE_PAYROLL = "shape payroll".freeze
     SIMPLEPAY_IE = "simplepay.ie".freeze
-    QUICKBOOKS_ONLINE = "quickbooks online".freeze
+    TALENOX = "talenox".freeze
     ZOHO = "zoho".freeze
 
     # Builds the enum from string
